@@ -22,14 +22,14 @@
             Открыть меню
           </span>
           <ul class="navigation-page__list navigation">
-            <li class="navigation-item navigation-item">
-              <a href="#" class="navigation-link--current">Главная</a>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link navigation__link--current">Главная</a>
             </li>
-            <li class="navigation-item">
-              <a href="#" class="navigation-link">Каталог продукции</a>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Каталог продукции</a>
             </li>
-            <li class="navigation-item">
-              <a href="#" class="navigation-link">Подбор программы</a>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -92,35 +92,33 @@
           <b class="dealer-invitation__title">Приглашаем к сотрудничеству дилеров!</b>
           <address class="dealer-invitation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
-        <div class="footer-page__map-container location-container">
-          <div class="footer-page__map location-container__image">
-            <img src="../source/img/location-mobile.png" class="footer-page__map-image" width="320" height="362" alt="Карта расположения офиса." >
-          </div>
+        <div class="footer-page__map location">
+            <img class="location__map-image" src="../source/img/location-mobile.png" width="320" height="362" alt="Карта расположения офиса." >
         </div>
-        <div class="footer-page__footer footer-logo-container">
-            <img src="../source/img/footer-logo-mobile.svg" class="footer-logo-image" width="128" height="24" alt="Логотип Cat Energy." >
-            <ul class="footer-page__social-container social-list">
-              <li class="social-list__item">
-                <a href="#" class="social-list__link social-list__link--vkontakte">
-                  <img src="" alt="Вконтакте." class="social-list_icon">
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a href="#" class="social-list__link social-list__link--youtube">
-                  <img src="" alt="Youtube." class="social-list_icon">
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a href="#" class="social-list__link social-list__link--telegram">
-                  <img src="" alt="Telegram." class="social-list_icon">
-                </a>
-              </li>
-            </ul>
-          <div class="footer-page__footer-developer developer-container">
-            <p class="developer-container__name developer-name">HTML Academy</p>
-            <img src="../source/img/htmlacademy-logo-mobile.svg" class="developers-container__logo developer-logo" width="27" height="34" alt="Логотип html Academy.">
-          </div>
+        <div class="footer-page__footer footer-logo">
+          <img class="footer-logo__image" src="../source/img/footer-logo-mobile.svg" width="128" height="24" alt="Логотип Cat Energy." >
         </div>
+          <ul class="footer-page__social social-list">
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--vkontakte" href="#">
+                <img class="social-list__icon" src="" alt="Вконтакте.">
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--youtube" href="#">
+                <img class="social-list__icon" src="" alt="Youtube.">
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--telegram" href="#">
+                <img src="" class="social-list__icon" alt="Telegram.">
+              </a>
+            </li>
+          </ul>
+          <a class="footer-page__developer developer" href="https://htmlacademy.ru/intensive/adaptive">
+            <p class="developer__name developer-name">HTML Academy</p>
+            <img class="developer__logo developer-logo" src="../source/img/htmlacademy-logo-mobile.svg" width="27" height="34" alt="Логотип html Academy.">
+          </a>
       </footer>
     </div>
   </body>
