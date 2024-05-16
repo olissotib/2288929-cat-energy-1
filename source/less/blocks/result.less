@@ -1,0 +1,32 @@
+.result {
+  text-align: center;
+}
+
+.result__highlights {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 124px;
+  min-height: 70px;
+}
+
+.result__mark {
+  .font-parameters(@color-black; 24px; 24px;);
+  font-weight: 400;
+}
+
+.result__description {
+  max-width: 80px;
+  .font-family("Lato", sans-serif;);
+  .font-parameters(@color-dark-grey-second; 12px; 12px;);
+}
+
+.result__summary {
+  .font-parameters(@color-black; 14px; 20px;);
+  text-transform: uppercase;
+}
