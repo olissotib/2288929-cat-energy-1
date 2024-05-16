@@ -4,10 +4,16 @@ body {
   font-size: 14px;
   line-height: 18px;
   color: @color-dark-grey;
-  background-color: @color-white;
+  background-color: @color-ordinary-grey;
 }
 
-/* .visually-hidden {
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -17,4 +23,4 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
- */
+
