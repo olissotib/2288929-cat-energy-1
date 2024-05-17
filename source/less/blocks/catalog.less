@@ -1,3 +1,24 @@
-.catalog__body {
+.catalog {
+  max-width: 320px;
+}
+
+.catalog__container {
   margin: 0 auto;
+}
+
+.catalog__title {
+  .font-parameters(@color-black; 36px; 36px;);
+  font-weight: 400;
+  .margin-padding(0 0 40px; 0;);
+}
+
+.catalog__list {
+  .list-style-reset(none;);
+  .margin-padding(0;0;);
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog__item {
+  .margin-padding(0 20px; 20px 0 25px;);
 }
