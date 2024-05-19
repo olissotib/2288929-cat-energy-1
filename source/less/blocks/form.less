@@ -1,3 +1,43 @@
 .form__body {
   margin: 0 auto;
 }
+
+.form__fieldset {
+  border: none;
+  border-bottom: 1px solid black;
+  .margin-padding(0; 0;);
+}
+
+.form__fieldset {
+
+}
+
+.from__item-container {
+  display: grid;
+  grid-template-columns: min-content auto;
+  column-gap: 13px;
+  align-items: center;
+}
+
+.form__label {
+  .font-parameters(@color-dark-grey-second; 16px; 18px;);
+  text-transform: uppercase;
+}
+
+.form__control[type="text"] {
+  outline: 1px solid @color-input-border;
+  border: none;
+  padding: 14px 13px 13px 15px;
+  /* .margin-padding(0 0 14px 13px; 14px 13px 13px 15px); */
+  font-family: inherit;
+  text-transform: uppercase;
+}
+
+.form__control[type="email"] {
+  outline: 1px solid @color-input-border;
+  border: none;
+  /* .margin-padding(0 0 14px 13px; 14px 13px 13px 15px); */
+  font-family: inherit;
+  text-transform: uppercase;
+}
+

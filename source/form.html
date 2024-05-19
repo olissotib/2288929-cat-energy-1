@@ -45,10 +45,12 @@
             <legend class="form__description visually-hidden">
               Основные данные кота
             </legend>
-            <label class="form__label">
+            <div class="from__item-container">
+            <label class="form__label" for="name">
               Имя*
-              <input class="form__control" type="text" name="cat-name" value="Барсик" required>
             </label>
+            <input class="form__control" id="name" type="text" name="cat-name" value="Барсик" required>
+            </div>
             <label class="form__label">
               Вес (кг):*
               <input class="form__control" type="text" name="cat-weight" value="7" required>
