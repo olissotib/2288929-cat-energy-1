@@ -1,8 +1,5 @@
-.catalog {
-  max-width: 320px;
-}
-
 .catalog__container {
+  max-width: 320px;
   margin: 0 auto;
   border-top: 1px solid @color-header-border-grey;
 }
@@ -10,7 +7,7 @@
 .catalog__title {
   .font-parameters(@color-black; 36px; 36px;);
   font-weight: 400;
-  .margin-padding(27px 0 40px; 0 0 0 20px;);
+  .margin-padding(27px 0 40px; 0);
 }
 
 .catalog__list {
@@ -21,5 +18,9 @@
 }
 
 .catalog__item {
-  .margin-padding(0 20px; 20px 0 25px;);
+  border-top: 1px solid @color-light-grey-second;
+
+  &--last-item {
+    border-bottom: 1px solid @color-light-grey-second;
+  }
 }

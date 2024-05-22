@@ -1,10 +1,5 @@
 .product {
-  border-top: 1px solid @color-light-grey-second;
-  .margin-padding(0 20px; 20px 0 25px;);
-
-  &--last-item {
-    border-bottom: 1px solid @color-light-grey-second;
-  }
+  .margin-padding(0; 20px 20px 25px;);
 }
 
 .product__photo-container {
@@ -28,7 +23,7 @@
 .product__option {
   .margin-padding(0;0;);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 5px;
   min-width: 140px;
 }

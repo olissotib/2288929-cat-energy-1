@@ -1,26 +1,19 @@
-.gift {
-  .margin-padding(0 20px; 0);
-  max-width: 280px;
-  min-height: 290px;
-  background-color: rgba(104, 183, 56, 0.85);
+.gift__container {
   position: relative;
+  min-height: 290px;
+  max-width: 280px;
+  margin: 0 auto;
+  background-color: rgba(104, 183, 56, 0.85);
   display: flex;
   justify-content: center;
-  z-index: 1;
 }
 
-.gift-image__container {
+.gift__image-container {
   position: absolute;
+  background-image: url("../img/cat-case.jpg");
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-image: url("../../img/cat-case.jpg");
-  z-index: -1;
   opacity: 0.15;
-}
-
-.gift__container {
-  margin: 35px auto;
 }
 
 .gift__description {
