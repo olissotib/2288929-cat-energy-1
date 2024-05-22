@@ -1,29 +1,14 @@
+.programms {
+  padding-top: 20px;
+}
+
 .programms__container {
-  max-width: 320px;
-  .margin-padding(0 auto; 0 0);
+  .container();
 }
 
 .programms__list {
   .list-styles(none; 0; 0;);
-}
-
-.programms__item {
-  background-color: @color-light-grey;
-  .margin-padding(20px 20px 20px; 30px 20px;);
-}
-
-.programm__title {
-  .font-parameters(@color-black; 24px; 37px;);
-  .margin-padding(0 0  29px; 0 0 0 70px;);
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.programm__description {
-  .font-family("Lato", sans-serif;);
-  .margin-padding(0 0 38px; 0;);
-}
-
-.programm__link {
-  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

@@ -5,36 +5,38 @@
     <title>HTML Academy: Кэт энерджи - Каталог</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="catalog__body">
+  <body class="catalog-page__body">
     <header class="header-catalog">
-      <nav class="header-catalog__navigation navigation-catalog">
-        <div class="navigation-catalog__container">
-          <a class="navigation-catalog__logo" href="./index.html">
-            <div class="logo-icon logo-icon__container">
-              <img src="./img/logo-icon-mobile.svg" width="33" height="38" alt="Иконка логотипа.">
+      <div class="header-catalog__container">
+        <nav class="header-catalog__navigation navigation-catalog">
+          <div class="navigation-catalog__container">
+            <div class="navigation-catalog__logo">
+              <a class="logo-icon logo-icon__container" href="./index.html">
+                <img src="./img/logo-icon-mobile.svg" width="33" height="38" alt="Иконка логотипа.">
+              </a>
+              <a class="logo-text logo-text__container" href="./index.html">
+                <img src="./img/logo-text-mobile.svg" width="101" height="18" alt="Cat energy.">
+              </a>
             </div>
-            <div class="logo-text logo-text__container">
-              <img src="./img/logo-text-mobile.svg" width="101" height="18" alt="Cat energy.">
-            </div>
-          </a>
-          <button class="navigation-catalog__button navigation-catalog__button--isclosed" type="button">
-          </button>
-          <span class="visually-hidden">
-            Открыть меню
-          </span>
-        </div>
-        <ul class="navigation-catalog__list navigation">
-          <li class="navigation__item">
-            <a class="navigation__link" href="index.html">Главная</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link navigation__link--current" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="navigation__item navigation__link--last-item">
-            <a class="navigation__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+            <button class="navigation-catalog__button navigation-catalog__button--isclosed" type="button">
+            </button>
+            <span class="visually-hidden">
+              Открыть меню
+            </span>
+          </div>
+          <ul class="navigation-catalog__list navigation">
+            <li class="navigation__item">
+              <a class="navigation__link" href="index.html">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--current" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="navigation__item navigation__link--last-item">
+              <a class="navigation__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="main-catalog">
       <section class="catalog catalog__container">
@@ -250,7 +252,7 @@
         </ul>
       </section>
       <section class="gift gift__container">
-        <div class="gif-image__container"></div>
+        <div class="gift-image__container"></div>
         <h2 class="gift__description">Закажите все и получите чехол для кота в подарок!</h2>
       </section>
       <section class="partnership">
