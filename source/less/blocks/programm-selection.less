@@ -1,22 +1,24 @@
-.programm-selecting {
-  max-width: 320px;
-}
-
 .programm-selecting__container {
+  max-width: 320px;
   margin: 0 auto;
-  padding: 0 20px;
-  border-top: 1px solid @color-header-border-grey;
 }
 
 .programm-selecting__title {
-  .margin-padding(27px 0; 0;);
+  .margin-padding(27px 0; 0 20px;);
   .font-parameters(@color-black; 36px; 36px);
   font-weight: 400;
 }
 
 .programm-selecting__description {
-  .margin-padding(0 0 29px; 0;);
+  .margin-padding(0 0 29px; 0 20px;);
   .font-parameters(@color-black; 14px; 18px;);
   text-transform: uppercase;
-  max-width: 230px;
+  max-width: 280px;
+}
+
+.programm-selecting__note-text {
+  font-family: "Lato", sans-serif;
+  .font-parameters(@color-black; 14px; 16px;);
+  .margin(21px 0 32px;);
+  text-align: center;
 }
