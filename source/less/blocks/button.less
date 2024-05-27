@@ -1,0 +1,19 @@
+.button {
+  .font-parameters(@color-white; 16px; 20px);
+  font-family: inherit;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background-color: @color-green;
+  height: 40px;
+  min-width: 280px;
+  display: grid;
+  place-items: center;
+  border: none;
+
+  &--show-all {
+    color: @color-dark-grey-second;
+    background-color: @color-light-grey;
+  }
+}

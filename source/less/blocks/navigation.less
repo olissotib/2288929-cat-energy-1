@@ -1,0 +1,26 @@
+.navigation {
+  .list-style-reset();
+  min-width: 320px;
+}
+
+.navigation__link {
+  display: grid;
+  place-items: center;
+  min-width: 320px;
+  min-height: 66px;
+  padding: 5px;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: @color-black;
+  background-color: @color-white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-top: 1px solid @color-light-grey-third;
+
+  &--last-item {
+    border-bottom: 1px solid @color-light-grey-third;
+  }
+}
