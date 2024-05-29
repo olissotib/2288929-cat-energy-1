@@ -65,19 +65,11 @@
 
 
   &--radio {
-    min-height: 30px;
-    padding-left: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    .form-label-flexstyle();
   }
 
-  &&--checkbox {
-    min-height: 30px;
-    padding-left: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  &--checkbox {
+    .form-label-flexstyle();
   }
 }
 
@@ -88,23 +80,11 @@
 }
 
 .form__control[type="text"] {
-  border: none;
-  font-size: inherit;
-  font-family: inherit;
-  line-height: inherit;
-  text-transform: uppercase;
-  padding: 14px 13px 13px 15px;
-  outline: 1px solid @color-input-border;
+  .form-control-appearancestyle();
 }
 
 .form__control[type="email"] {
-  border: none;
-  font-size: inherit;
-  font-family: inherit;
-  line-height: inherit;
-  text-transform: uppercase;
-  padding: 14px 13px 13px 15px;
-  outline: 1px solid @color-input-border;
+  .form-control-appearancestyle();
 }
 
 .form__control.textarea {
@@ -146,7 +126,7 @@
 }
 
 .form__control[type="checkbox"]:checked + .form__control-mark {
-  background-image: url("../../img/checkmark-mobile.svg");
+  background-image: url("../img/checkmark-mobile.svg");
   background-size: 18px 14px;
   background-repeat: no-repeat;
   background-position: center center;
