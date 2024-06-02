@@ -2,4 +2,30 @@
   max-width: 320px;
   margin: 0 auto;
   background-color: @color-white;
+
+  @media (min-width: @tablet-width) {
+    min-width: 704px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1220px;
+  }
+}
+
+.header-page__container {
+  @media (min-width: @tablet-width) {
+    padding: 25px 30px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 55px 110px 0;
+  }
+}
+
+.header-page__navigation {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

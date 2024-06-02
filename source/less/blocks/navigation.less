@@ -1,6 +1,13 @@
 .navigation {
   .list-style-reset();
   min-width: 320px;
+
+  /* @media (min-width: @tablet-width) {
+    min-width: 436px;
+  } */
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .navigation__link {
@@ -22,5 +29,12 @@
 
   &--last-item {
     border-bottom: 1px solid @color-light-grey-third;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-width: max-content;
+    min-height: min-content;
+    border: none;
+    padding: 0 0 10px;
   }
 }
