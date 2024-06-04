@@ -1,20 +1,50 @@
 .promo {
   padding-top: 27px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 65px;
+  }
 }
 
 .promo__container {
   text-align: center;
   .container();
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    .container-tablet();
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    .container-desctop();
+  }
 }
 
 .promo__text-description {
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    max-width: 415px;
+    text-align: left;
+    margin-left: 90px;
+    order: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+  }
 }
 
 .promo__headline {
   .margin-padding(0 0 25px; 0;);
   .font-parameters(@color-black; 36px; 36px);
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    .margin(0 0 40px;);
+  }
 }
 
 .promo__catchphrase {
@@ -22,10 +52,23 @@
   .font-parameters(@color-black; 14px; 14px);
   text-transform: uppercase;
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    .margin(0 0 50px;);
+  }
 }
 
 .promo__product-photo-container {
   .margin-padding(0; 0 0 3px;);
+
+  @media (min-width: @tablet-width) {
+    min-height: 609px;
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 499px;
+  }
 }
 
 .promo__product-photo {
@@ -34,4 +77,14 @@
 
 .promo__button {
   .margin-padding(0; 5px;);
+
+  @media (min-width: @tablet-width) {
+    max-width: 244px;
+    margin-left: 90px;
+    order: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+  }
 }

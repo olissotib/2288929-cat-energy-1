@@ -2,24 +2,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 13px 20px;
 
-  @media (min-width: @tablet-width) {
-    padding: 0;
+  @media (max-width: @tablet-width) {
+    .container();
+    padding-top: 13px;
+    padding-bottom: 14px;
   }
 }
 
 .navigation-page__list {
+  max-width: 320px;
+  margin: 0 auto;
   /* display: none; */
 }
 
 .navigation-page__logo {
   display: flex;
   align-items: center;
-
-  @media (min-width: @tablet-width) {
-    /* margin-right: 94px; */
-  }
 }
 
 .navigation-page__button {
