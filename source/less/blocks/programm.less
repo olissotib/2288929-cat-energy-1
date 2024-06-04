@@ -1,6 +1,15 @@
 .programm {
   background-color: @color-light-grey;
   .padding(30px 20px 20px;);
+
+  @media (min-width: @tablet-width) {
+    min-height: 372px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 374px;
+    max-width: 570px;
+  }
 }
 
 .programm__title {
