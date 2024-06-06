@@ -1,9 +1,24 @@
 .location__container {
   .margin(0 auto;);
   max-width: 320px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 768px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1440px;
+    padding: 0 110px;
+  }
 }
 
 .location__map-image {
   width: 100%;
   display: block;
+  min-height: 362px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 400px;
+  }
 }
