@@ -1,10 +1,34 @@
 .example {
   background-color: #eaeaea;
   .padding(25px 0 0;);
+
+  @media (min-width: @tablet-width) {
+    .padding(45px 0 0;);
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding(0;);
+  }
 }
 
 .example__container {
   .container();
+
+  @media (min-width: @tablet-width) {
+    .container-tablet();
+  }
+
+  @media (min-width: @desktop-width) {
+    .container-desktop();
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.example__text {
+  @media (min-width: @desktop-width) {
+    padding-bottom: 75px;
+  }
 }
 
 .example__title {
@@ -18,4 +42,16 @@
   color: @color-dark-grey-second;
   .padding(0 0 20px;);
   .margin(0;);
+
+  @media (min-width: @desktop-width) {
+    max-width: 436px;
+  }
+}
+
+.example__slider {
+  padding-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+  }
 }
