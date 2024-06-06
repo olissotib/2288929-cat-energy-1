@@ -1,6 +1,10 @@
 .partnership {
   .padding(26px 0;);
 
+  @media (min-width: @tablet-width) {
+    .padding(60px 0;);
+  }
+
   &--catalog {
     background-color: @color-light-grey;
   }
@@ -12,12 +16,25 @@
 
 .partnership__container {
   .container();
+
+  @media (min-width: @tablet-width) {
+    .container-tablet();
+  }
+
+  @media (min-width: @desktop-width) {
+    .container-desktop();
+  }
 }
 
 .partnership__content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    .padding(0 40px;);
+    min-height: 80px;
+  }
 }
 
 .partnership__content-title {
@@ -33,4 +50,8 @@
   .font-parameters(@color-dark-grey-second; 14px; 20px;);
   font-style: normal;
   max-width: 140px;
+
+  @media (min-width: @tablet-width) {
+    text-align: right;
+  }
 }
