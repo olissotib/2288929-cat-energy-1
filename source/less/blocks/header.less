@@ -1,0 +1,76 @@
+.header {
+  /* max-width: 320px;
+  margin: 0 auto; */
+  background-color: @color-white;
+
+
+  @media (min-width: @tablet-width) {
+    min-width: 704px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1220px;
+  }
+}
+
+.header__container {
+  /* .container();
+  padding-top: 13px; */
+
+  @media (min-width: @tablet-width) {
+    .container-tablet();
+    padding-top: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .container-desktop();
+    padding-top: 55px;
+  }
+}
+
+.header__navigation {
+  @media (min-width: @tablet-width) {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 59px;
+  }
+}
+
+.header__navigation-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__navigation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: @tablet-width) {
+    .container();
+    padding-top: 13px;
+    padding-bottom: 14px;
+  }
+}
+
+.header__navigation-button {
+  display: grid;
+  place-items: center;
+  height: 24px;
+  width: 24px;
+  border: none;
+  background-image: url("../img/nav-button-open.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
