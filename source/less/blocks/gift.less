@@ -1,3 +1,12 @@
+.gift {
+  .padding(35px 0 35px;);
+
+  @media (min-width: @desktop-width) {
+    .padding(0;);
+    align-self: end;
+  }
+}
+
 .gift__container {
   position: relative;
   min-height: 290px;
@@ -6,6 +15,16 @@
   background-color: rgba(104, 183, 56, 0.85);
   display: flex;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    min-height: 200px;
+    min-width: 707px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 288px;
+    min-width: 245px;
+  }
 }
 
 .gift__image-container {
