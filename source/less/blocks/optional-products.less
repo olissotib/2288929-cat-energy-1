@@ -57,18 +57,12 @@
     display: grid;
     grid-template-columns: repeat(2, 280px);
     column-gap: 72px;
-  }
-
-  /* @media (min-width: @desktop-width) {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    .padding(15px 0 17px;);
-  } */
+  }
 
   @media (min-width: @desktop-width) {
     padding: 15px 0 16px;
-    grid-template-columns: 285px 285px 245px;
+    grid-template-columns: 305px 305px 245px;
     column-gap: 20px;
   }
 
@@ -112,6 +106,10 @@
 .optional-products__description-title {
   @media (min-width: @tablet-width) {
     justify-self: end;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-self: start;
   }
 }
 
