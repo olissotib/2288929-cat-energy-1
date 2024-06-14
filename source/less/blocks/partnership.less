@@ -12,6 +12,15 @@
   &--form {
     background-color: @color-light-grey;
   }
+
+  @media (min-width: @desktop-width) {
+    left: 110px;
+    transform: translateY(50%);
+    background-color: @color-white;
+    position: absolute;
+    padding: 0;
+    max-width: 565px;
+  }
 }
 
 .partnership__container {
@@ -22,7 +31,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    .container-desktop();
+    .padding(60px 80px;);
   }
 }
 
