@@ -2,13 +2,23 @@
   margin: 0 auto;
 }
 
+.form__fieldset-general-wrapper {
+  margin: 0 auto;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 570px);
+    column-gap: 80px;
+    margin-bottom: 70px;
+  }
+}
+
 .form__fieldset {
   border: none;
   border-bottom: 1px solid @color-header-border-grey;
   .margin-padding(0; 0 20px;);
-  display: flex;
-  flex-direction: column;
   gap: 14px;
+  display: grid;
 
   &--general {
     padding-bottom: 24px;
@@ -35,12 +45,38 @@
   }
 
   @media (min-width: @tablet-width) {
+    gap: 20px;
     border: none;
     margin: 0;
     .margin-padding(0; 0;);
 
     &--general {
       margin-bottom: 72px;
+      min-height: 196px;
+    }
+
+    &--programm {
+      border: 1px solid @color-input-border;
+      .padding(23px 27px;);
+      min-height: 196px;
+    }
+
+    &--contacts {
+      margin-top: 65px;
+    }
+
+    &--comment {
+      margin-top: 65px;
+    }
+
+    &--optional {
+      margin-top: 65px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--general {
+      margin-bottom: 0;
     }
 
     &--programm {
@@ -49,6 +85,9 @@
     }
 
     &--contacts {
+      display: grid;
+      grid-template-columns: repeat(2, 570px);
+      column-gap: 80px;
       margin-top: 65px;
     }
 
@@ -143,8 +182,12 @@
 
   @media (min-width: @tablet-width) {
     .padding(11px 20px;);
-    min-width: 628px;
+    min-width: 100%;
     min-height: 175px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding(9px 20px;);
   }
 }
 
@@ -189,6 +232,12 @@
     column-gap: 60px;
     row-gap: 32px;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+    row-gap: 60px;
+  }
 }
 
 .form__submit {
@@ -197,7 +246,11 @@
 
   @media (min-width: @tablet-width) {
     min-width: 284px;
-    .margin(52px 60px 0 0;);
+    .margin(52px 0 0 0;);
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 570px;
   }
 }
 
@@ -208,9 +261,14 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    max-width: 200px;
     margin: 0;
     position: relative;
-    right: -110px;
+    right: -320px;
     bottom: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: -625px;
   }
 }

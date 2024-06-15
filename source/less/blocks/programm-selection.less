@@ -7,6 +7,11 @@
     .container-tablet();
     padding-bottom: 60px;
   }
+
+  @media (min-width: @desktop-width) {
+    .container-desktop();
+    padding-bottom: 79px;
+  }
 }
 
 .programm-selecting__title {
@@ -17,6 +22,10 @@
   @media (min-width: @tablet-width) {
     .margin-padding(65px 0 54px; 0 40px;);
   }
+
+  @media (min-width: @desktop-width) {
+    .margin-padding(74px 0 55px; 0;);
+  }
 }
 
 .programm-selecting__description {
@@ -26,13 +35,21 @@
   max-width: 280px;
 
   @media (min-width: @tablet-width) {
-    .margin-padding(0 0 66px; 0 40px;);
+    .margin-padding(0 0 66px; 0 0 0 40px;);
     max-width: 323px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding(0;);
   }
 }
 
 .programm-selecting__form {
   @media (min-width: @tablet-width) {
     .padding(0 40px;);
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding(0;);
   }
 }

@@ -45,49 +45,51 @@
           <h1 class="programm-selecting__title">Подбор программы</h1>
           <p class="programm-selecting__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
           <form class="programm-selecting__form form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="form__fieldset form__fieldset--general">
-              <legend class="form__description visually-hidden">
-                Основные данные кота
-              </legend>
-              <div class="from__item-container">
-                <label class="form__label" for="name">
-                  Имя*
+            <div class="form__fieldset-general-wrapper">
+              <fieldset class="form__fieldset form__fieldset--general">
+                <legend class="form__description visually-hidden">
+                  Основные данные кота
+                </legend>
+                <div class="from__item-container">
+                  <label class="form__label" for="name">
+                    Имя*
+                  </label>
+                  <input class="form__control" id="name" type="text" name="cat-name" placeholder="Барсик" required>
+                </div>
+                <div class="from__item-container">
+                  <label class="form__label" for="age">
+                    Вес (кг):*
+                  </label>
+                  <input class="form__control" id="age" type="text" name="cat-weight" placeholder="7" required>
+                </div>
+                <div class="from__item-container">
+                  <label class="form__label">
+                    Возраст (лет):
+                  </label>
+                  <input class="form__control" type="text" name="cat-age" placeholder="7">
+                </div>
+              </fieldset>
+              <fieldset class="form__fieldset form__fieldset--programm">
+                <legend class="form__description visually-hidden">
+                  Выбор программы
+                </legend>
+                <label class="form__label form__label--radio">
+                  <input class="form__control visually-hidden" type="radio" name="programm" value="programm-loss" checked required>
+                  <span class="form__control-mark form__control-mark--radio"></span>
+                  <span class="form__control-label form__control-label--radio">Похудение</span>
                 </label>
-                <input class="form__control" id="name" type="text" name="cat-name" placeholder="Барсик" required>
-              </div>
-              <div class="from__item-container">
-                <label class="form__label" for="age">
-                  Вес (кг):*
+                <label class="form__label form__label--radio">
+                  <input class="form__control visually-hidden" type="radio" name="programm" value="programm-gain" required>
+                  <span class="form__control-mark form__control-mark--radio"></span>
+                  <span class="form__control-label form__control-label--radio">Набор массы</span>
                 </label>
-                <input class="form__control" id="age" type="text" name="cat-weight" placeholder="7" required>
-              </div>
-              <div class="from__item-container">
-                <label class="form__label">
-                  Возраст (лет):
+                <label class="form__label form__label--radio">
+                  <input class="form__control visually-hidden" type="radio" name="programm" value="programm-unknown" required>
+                  <span class="form__control-mark form__control-mark--radio"></span>
+                  <span class="form__control-label form__control-label--radio">Не знаю (нужен ваш совет)</span>
                 </label>
-                <input class="form__control" type="text" name="cat-age" placeholder="7">
-              </div>
-            </fieldset>
-            <fieldset class="form__fieldset form__fieldset--programm">
-              <legend class="form__description visually-hidden">
-                Выбор программы
-              </legend>
-              <label class="form__label form__label--radio">
-                <input class="form__control visually-hidden" type="radio" name="programm" value="programm-loss" checked required>
-                <span class="form__control-mark form__control-mark--radio"></span>
-                <span class="form__control-label form__control-label--radio">Похудение</span>
-              </label>
-              <label class="form__label form__label--radio">
-                <input class="form__control visually-hidden" type="radio" name="programm" value="programm-gain" required>
-                <span class="form__control-mark form__control-mark--radio"></span>
-                <span class="form__control-label form__control-label--radio">Набор массы</span>
-              </label>
-              <label class="form__label form__label--radio">
-                <input class="form__control visually-hidden" type="radio" name="programm" value="programm-unknown" required>
-                <span class="form__control-mark form__control-mark--radio"></span>
-                <span class="form__control-label form__control-label--radio">Не знаю (нужен ваш совет)</span>
-              </label>
-            </fieldset>
+              </fieldset>
+            </div>
             <fieldset class="form__fieldset form__fieldset--contacts">
               <legend class="form__description form__description--contacts">
                 Контактные данные (владельца кота)
