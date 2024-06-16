@@ -1,7 +1,4 @@
 .catalog__container {
-  /* max-width: 320px;
-  margin: 0 auto; */
-
   @media (min-width: @tablet-width) {
     .container-tablet();
   }
@@ -13,9 +10,15 @@
 
 .catalog__title {
   max-width: 320px;
+  .margin-padding(0 auto 40px; 0 0 0 20px);
   .font-parameters(@color-black; 36px; 36px;);
   font-weight: 400;
-  .margin-padding(27px auto 40px; 0 0 0 20px);
+
+  @media (min-width: @tablet-width) {
+    max-width: 705px;
+    .margin-padding(0 0 84px; 0;);
+    .font-parameters(@color-black; 60px; 60px;);
+  }
 }
 
 .catalog__list {

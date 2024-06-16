@@ -1,8 +1,9 @@
 .product {
-  background-color: #cecece;
+  background-color: @color-white;
 
   @media (min-width: @tablet-width) {
     min-height: 511px;
+    background-image: linear-gradient(to top, @color-light-grey 430px, @color-white 430px);
   }
 }
 
@@ -22,6 +23,7 @@
 
   &--show-more-card {
     @media (min-width: @tablet-width) {
+      outline: 2px solid @color-light-grey;
       .padding(160px 37px 40px;);
     }
   }
