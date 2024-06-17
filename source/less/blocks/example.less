@@ -35,13 +35,26 @@
   .font-parameters(@color-black; 36px; 40px;);
   font-weight: 400;
   .margin-padding(0 0 40px; 0;);
+
+  @media (min-width: @tablet-width) {
+    .font-parameters(@color-black; 60px; 60px;);
+    .margin(0 0 60px;);
+  }
+
+  @media (min-width: @desktop-width) {
+    .margin(0 0 146px;);
+  }
 }
 
 .example__description {
   .font-family("Lato", sans-serif;);
   color: @color-dark-grey-second;
-  .padding(0 0 20px;);
-  .margin(0;);
+  .margin-padding(0; 0 0 20px;);
+
+  @media (min-width: @tablet-width) {
+    .font-parameters(@color-dark-grey-second; 16px; 24px;);
+    .margin(0 0 55px;);
+  }
 
   @media (min-width: @desktop-width) {
     max-width: 436px;
@@ -52,6 +65,11 @@
   padding-bottom: 40px;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 100px;
     text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 75px;
   }
 }
