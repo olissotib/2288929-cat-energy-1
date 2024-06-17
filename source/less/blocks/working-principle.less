@@ -26,6 +26,11 @@
   .font-parameters(@color-black; 36px; 40px);
   font-weight: 400;
   .margin-padding(0 0 40px; 0;);
+
+  @media (min-width: @tablet-width) {
+    .font-parameters(@color-black; 60px; 60px);
+    .margin-padding(0 0 32px; 0;);
+  }
 }
 
 .working-principle__list {
@@ -34,6 +39,7 @@
   gap: 24px;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 47px;
     grid-template-columns: repeat(2, 246px);
     row-gap: 37px;
     column-gap: 137px;
@@ -50,7 +56,8 @@
   .margin-padding(0; 0 0 0 80px;);
 
   @media (min-width: @tablet-width) {
+    .font-parameters(@color-dark-grey-second; 16px; 24px;);
     min-height: 280px;
-    .margin-padding(0;151px 0 57px;);
+    .margin-padding(0; 151px 0 57px;);
   }
 }
