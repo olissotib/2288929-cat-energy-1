@@ -3,12 +3,13 @@
   .padding(30px 20px 20px;);
 
   @media (min-width: @tablet-width) {
+    .padding(77px 63px 53px 52px;);
     min-height: 372px;
   }
 
   @media (min-width: @desktop-width) {
     min-height: 374px;
-    max-width: 570px;
+    min-width: 570px;
   }
 }
 
@@ -17,9 +18,29 @@
   .margin-padding(0 0 29px; 0 0 0 70px;);
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .font-parameters(@color-black; 36px; 36px;);
+    .margin-padding(0 0 24px; 0;);
+  }
+
+  @media (min-width: @desktop-width) {
+    .margin-padding(0 0 73px; 0 0 0 162px;);
+  }
 }
 
 .programm__description {
   .font-family("Lato", sans-serif;);
   .margin-padding(0 0 40px; 0;);
+
+  @media (min-width: @tablet-width) {
+    max-width: 342px;
+    .font-parameters(@color-black; 16px; 24px;);
+    .margin-padding(0 0 48px; 0;);
+  }
+
+  @media (min-width: @desktop-width) {
+    .margin(0 0 23px;);
+    max-width: 460px;
+  }
 }
