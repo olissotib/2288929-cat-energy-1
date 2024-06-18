@@ -6,7 +6,7 @@
   text-decoration: none;
   text-align: center;
   background-color: @color-green;
-  height: 40px;
+  min-height: 40px;
   display: grid;
   place-items: center;
   border: none;
@@ -14,5 +14,10 @@
   &--show-all {
     color: @color-dark-grey-second;
     background-color: @color-light-grey;
+  }
+
+  &--promo {
+    .font-parameters(@color-white; 20px; 26px;);
+    min-height: 54px;
   }
 }
