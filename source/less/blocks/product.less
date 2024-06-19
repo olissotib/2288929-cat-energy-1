@@ -1,43 +1,111 @@
 .product {
-  .margin-padding(0; 20px 20px 25px;);
+  background-color: @color-white;
+
+  @media (min-width: @tablet-width) {
+    min-height: 511px;
+    background-image: linear-gradient(to top, @color-light-grey 430px, @color-white 430px);
+  }
+}
+
+.product__container {
+  max-width: 320px;
+  .margin-padding(0 auto; 20px 20px 25px;);
+
+  @media (min-width: @tablet-width) {
+    max-width: 324px;
+    .padding(0 37px 40px;);
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 245px;
+    .padding(0 38px 40px;);
+  }
+
+  &--show-more-card {
+    @media (min-width: @tablet-width) {
+      outline: 2px solid @color-light-grey;
+      .padding(160px 37px 40px;);
+    }
+  }
+}
+
+.product__container-content {
+  display: flex;
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 250px;
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 169px;
+  }
 }
 
 .product__photo-container {
   display: grid;
   place-items: center;
   min-width: 140px;
-}
 
-.product__container {
-  display: flex;
-  margin-bottom: 17px;
+  @media (min-width: @tablet-width) {
+    min-width: 200px;
+    min-height: 210px;
+    .margin(10px 0 22px;);
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 169px;
+  }
 }
 
 .product__title {
-  .margin-padding(0 0 14px;0;);
+  .margin-padding(0 0 14px; 0;);
   .font-parameters(@color-dark-grey-second; 16px; 20px;);
   font-weight: 400;
   max-width: 80px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 135px;
+    .margin(0 auto 21px;);
+    .font-parameters(@color-dark-grey-second; 20px; 24px;);
+    text-align: center;
+  }
+}
+
+.product__list {
+  .list-style-reset();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 }
 
 .product__option {
   .margin-padding(0;0;);
+  .font-family("Lato", sans-serif;);
+  .font-parameters(@color-dark-grey-second; 12px; 16px;);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 5px;
   min-width: 140px;
+
+  @media (min-width: @tablet-width) {
+    .padding(0 0 5px;);
+    .font-parameters(@color-dark-grey-second; 16px; 20px;);
+    border-bottom: 1px solid @color-ordinary-grey;
+  }
 }
 
 .product__option-title {
   max-width: 70px;
   justify-self: start;
-  .font-family("Lato", sans-serif;);
-  .font-parameters(@color-dark-grey-second; 12px; 16px;);
 }
 
 .product__option-text {
   max-width: 70px;
   justify-self: end;
-  .font-family("Lato", sans-serif;);
-  .font-parameters(@color-dark-grey-second; 12px; 16px;);
 }

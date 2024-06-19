@@ -1,20 +1,58 @@
 .promo {
-  padding-top: 27px;
+  .padding(27px 0 20px;);
+
+  @media (min-width: @tablet-width) {
+    .padding(65px 0 0;);
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding(29px 0 82px;);
+  }
 }
 
 .promo__container {
-  text-align: center;
   .container();
+  display: grid;
+
+  @media (min-width: @tablet-width) {
+    .container-tablet();
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    .container-desktop();
+    grid-template-columns: 447px 47px 552px;
+    grid-template-rows: 81px auto 54px 184px;
+  }
 }
 
 .promo__text-description {
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    max-width: 416px;
+    text-align: left;
+    margin-left: 90px;
+    order: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    .margin(0 0 52px;);
+    margin-left: 80px;
+  }
 }
 
 .promo__headline {
   .margin-padding(0 0 25px; 0;);
   .font-parameters(@color-black; 36px; 36px);
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    .margin(0 0 40px;);
+    .font-parameters(@color-black; 60px; 60px);
+  }
 }
 
 .promo__catchphrase {
@@ -22,10 +60,33 @@
   .font-parameters(@color-black; 14px; 14px);
   text-transform: uppercase;
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    .margin(0 0 50px;);
+    .font-parameters(@color-black; 20px; 20px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .promo__product-photo-container {
   .margin-padding(0; 0 0 3px;);
+
+  @media (min-width: @tablet-width) {
+    min-height: 609px;
+    order: 2;
+    margin-top: -83px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    min-height: 499px;
+    min-width: 522px;
+    grid-column: 2 / 4;
+    grid-row: 1 / 6;
+  }
 }
 
 .promo__product-photo {
@@ -33,5 +94,21 @@
 }
 
 .promo__button {
-  .margin-padding(0; 5px;);
+  .margin-padding(0; 5px 5px;);
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    max-width: 244px;
+    margin-left: 90px;
+    order: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-weight: 400;
+    min-width: 244px;
+    margin-left: 80px;
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+    align-self: start;
+  }
 }

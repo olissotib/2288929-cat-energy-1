@@ -1,5 +1,7 @@
 .show-more-card {
-  padding: 25px 20px;
+  @media (min-width: @tablet-width) {
+    min-height: 429px;
+  }
 }
 
 .show-more-card__title {
@@ -7,6 +9,13 @@
   .font-parameters(@color-black-second; 16px; 20px;);
   font-weight: 400;
   text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .font-parameters(@color-black-second; 20px; 24px;);
+    max-width: 140px;
+    .margin(0 auto 23px;);
+  }
 }
 
 .show-more-card__description {
@@ -14,5 +23,10 @@
   .margin-padding(0 0 21px; 0;);
   .font-parameters(@color-dark-grey-second; 12px; 16px;);
   text-align: center;
-}
 
+  @media (min-width: @tablet-width) {
+    .font-parameters(@color-black-second; 16px; 18px;);
+    .margin(0 auto 82px;);
+    max-width: 170px;
+  }
+}

@@ -2,15 +2,16 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="header-page">
-      <div class="header-page__container">
-        <nav class="header-page__navigation navigation-page">
-          <div class="navigation-page__container">
-            <div class="navigation-page__logo">
+    <header class="header">
+      <div class="header__container">
+        <nav class="header__navigation">
+          <div class="header__navigation-container">
+            <div class="header__navigation-logo">
               <a class="logo-icon logo-icon__container">
                 <img src="./img/logo-icon-mobile.svg" width="33" height="38" alt="Иконка логотипа.">
               </a>
@@ -18,13 +19,13 @@
                 <img src="./img/logo-text-mobile.svg" width="101" height="18" alt="Cat energy.">
               </a>
             </div>
-            <button class="navigation-page__button navigation-page__button--isclosed" type="button">
+            <button class="header__navigation-button header__navigation-button" type="button">
             </button>
             <span class="visually-hidden">
               Открыть меню
             </span>
           </div>
-          <ul class="navigation-page__list navigation">
+          <ul class="header__navigation-list navigation">
             <li class="navigation__item">
               <a class="navigation__link navigation__link--current" href="index.html">Главная</a>
             </li>
@@ -38,7 +39,7 @@
         </nav>
       </div>
     </header>
-    <main class="main-page">
+    <main class="main main--page">
       <section class="promo">
         <div class="promo__container">
           <div class="promo__text-description">
@@ -48,7 +49,7 @@
           <div class="promo__product-photo-container">
             <img class="promo__product-photo" src="./img/promo-image-mobile.svg" alt="Cat energy pro с курицей порция 500 грамм.">
           </div>
-          <a class="promo__button button"  href="form.html">Подобрать программу</a>
+          <a class="promo__button button button--promo"  href="form.html">Подобрать программу</a>
         </div>
       </section>
       <section class="programms">
@@ -76,56 +77,60 @@
             <li class="working-principle__item working-principle__item--nutrition">Функциональное питание содержит только полезные питательные вещества.</li>
             <li class="working-principle__item working-principle__item--form">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
             <li class="working-principle__item working-principle__item--eating">Замените один-два приема обычной еды на наше функциональное питание.</li>
-            <li class="working-principle__item working-principle__item--result">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+            <li class="working-principle__item working-principle__item--result">Уже через месяц наслаждайтесь изменениями к лучшему <br> вашего питомца!</li>
           </ul>
         </div>
       </section>
       <section class="example">
         <div class="example__container">
-          <h2 class="example__title">Живой пример</h2>
-          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <div class="example__highlights result">
-            <div class="result__highlights">
-              <div class="result__item">
-                <b class="result__mark">5 кг</b>
-                <p class="result__description">снижение веса</p>
+          <div class="example__text">
+            <h2 class="example__title">Живой пример</h2>
+            <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+              Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="example__highlights result">
+              <div class="result__highlights">
+                <div class="result__item">
+                  <b class="result__mark">5 кг</b>
+                  <p class="result__description">снижение веса</p>
+                </div>
+                <div class="result__item">
+                  <b class="result__mark">60 дней</b>
+                  <p class="result__description">затрачено времени</p>
+                </div>
               </div>
-              <div class="result__item">
-                <b class="result__mark">60 дней</b>
-                <p class="result__description">затрачено времени</p>
-              </div>
+              <p class="result__summary">Затраты на питание: <span class="result__summary-count">15 000 РУБ.</span> </p>
             </div>
-            <p class="result__summary">Затраты на питание: 15 000 РУБ. </p>
           </div>
           <div class="example__slider before-after-slider">
             <button class="before-after-slider__button" type="button"></button>
             <span class="visually-hidden">Сравнить внешний вид до и после</span>
             <img class="before-after-slider__photo before-after-slider__photo--before" src="./img/slider-mobile-before1x.png"  width="280" height="256" alt="Внещний вид кота в начале.">
-            <img class="before-after-slider__photo before-after-slider__photo--after" src="./img/slider-mobile-after1x.png"   width="280" height="256" alt="Внещний вид кота в конце.">
+            <!-- <img class="before-after-slider__photo before-after-slider__photo--after" src="./img/slider-mobile-after1x.png"   width="280" height="256" alt="Внещний вид кота в конце."> -->
           </div>
         </div>
       </section>
-      <section class="partnership">
-        <div class="partnership__container">
-          <div class="invitation">
-            <h2 class="invitation__title">Приглашаем <br>к сотрудничеству дилеров!</h2>
-            <address class="invitation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      <div class="contacts-wrapper">
+        <section class="partnership partnership--form">
+          <div class="partnership__container">
+            <div class="partnership__content">
+              <h2 class="partnership__content-title">Приглашаем <br>к сотрудничеству дилеров!</h2>
+              <address class="partnership__content-address">ул. Большая Конюшенная, д. 19/8 <span class="partnership__content-address-city">Санкт-Петербург</span></address>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <section class="location">
         <div class="location__container">
-          <iframe class="location__map-image" src="./img/location-mobile.png" frameborder="0"></iframe>
+          <img class="location__map-image" src="./img/location-mobile.png" width="320" height="362" alt="Карта расположения офиса." >
         </div>
       </section>
     </main>
-    <footer class="footer-page">
-      <div class="footer-page__container">
-        <div class="footer-page__logo footer-logo">
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__logo footer-logo">
           <img class="footer-logo__image" src="./img/footer-logo-mobile.svg" width="128" height="24" alt="Логотип Cat Energy." >
         </div>
-        <ul class="footer-page__social social-list">
+        <ul class="footer__social social-list">
           <li class="social-list__item">
             <a class="social-list__link" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="27" height="17" fill="none" viewBox="0 0 27 17" aria-label="Вконтакте.">
@@ -168,7 +173,7 @@
             </a>
           </li>
         </ul>
-        <a class="footer-page__developer developer" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive">
           <div class="developer-name__contariner">
             <p class="developer__name developer-name">HTML Academy</p>
           </div>

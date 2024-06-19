@@ -1,21 +1,68 @@
 .example {
   background-color: #eaeaea;
-  .padding(25px 0 0;);
+  .padding(25px 0 40px;);
+
+  @media (min-width: @tablet-width) {
+    .padding(45px 0 100px;);
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding(0 0 75px;);
+  }
 }
 
 .example__container {
   .container();
+
+  @media (min-width: @tablet-width) {
+    .container-tablet();
+  }
+
+  @media (min-width: @desktop-width) {
+    .container-desktop();
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.example__text {
+  @media (min-width: @desktop-width) {
+    padding-bottom: 75px;
+  }
 }
 
 .example__title {
   .font-parameters(@color-black; 36px; 40px;);
   font-weight: 400;
   .margin-padding(0 0 40px; 0;);
+
+  @media (min-width: @tablet-width) {
+    .font-parameters(@color-black; 60px; 60px;);
+    .margin(0 0 60px;);
+  }
+
+  @media (min-width: @desktop-width) {
+    .margin(0 0 146px;);
+  }
 }
 
 .example__description {
   .font-family("Lato", sans-serif;);
   color: @color-dark-grey-second;
-  .padding(0 0 20px;);
-  .margin(0;);
+  .margin-padding(0; 0 0 20px;);
+
+  @media (min-width: @tablet-width) {
+    .font-parameters(@color-dark-grey-second; 16px; 24px;);
+    .margin(0 0 55px;);
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 436px;
+  }
+}
+
+.example__slider {
+  @media (min-width: @tablet-width) {
+    text-align: center;
+  }
 }
