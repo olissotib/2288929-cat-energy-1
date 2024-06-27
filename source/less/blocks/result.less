@@ -30,10 +30,8 @@
   align-items: center;
   justify-content: space-between;
   min-width: 124px;
-  min-height: 70px;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-top: 1px solid black;
+  min-height: 56px;
+  border: 1px solid @color-ordinary-grey;
   border-radius: 5px;
 
   @media (min-width: @tablet-width) {
@@ -60,7 +58,9 @@
   max-width: 80px;
   .font-family("Lato", sans-serif;);
   .font-parameters(@color-dark-grey-second; 12px; 12px;);
-  .margin-padding(0; 0;);
+  .margin-padding(0 0 -14px; 0;);
+  .margin-padding(7px 0 -14px; 0;);
+  background-color: @color-expamle-background;
 
   @media (min-width: @tablet-width) {
     max-width: 125px;
