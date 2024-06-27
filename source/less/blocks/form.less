@@ -176,19 +176,27 @@
 
 .form__control[type="text"] {
   .form-control-appearancestyle();
+  .font-parameters(@color-dark-grey-second; 16px; 18px;);
 
   @media (min-width: @tablet-width) {
     .padding(11px 20px;);
     min-height: 52px;
+    .font-size(20px; 30px;);
   }
 }
 
 .form__control[type="email"] {
   .form-control-appearancestyle();
+  .font-parameters(@color-dark-grey-second; 16px; 18px;);
 
   @media (min-width: @tablet-width) {
     .padding(11px 20px;);
+    .font-size(20px; 30px;);
     min-height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .font-size(20px; 30px;);
   }
 }
 
