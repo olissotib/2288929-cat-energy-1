@@ -140,13 +140,17 @@
 }
 
 .header-index__navigation--closed .header-index__navigation-list {
-  display: none;
+  @media (max-width: @mobile-only-width) {
+    display: none;
+  }
 }
 
 .header-index__navigation--opened .header-index__navigation-list {
-  position: absolute;
-  z-index: 6;
-  width: 100%;
+  @media (max-width: @mobile-only-width) {
+    position: absolute;
+    z-index: 6;
+    width: 100%;
+  }
 }
 
 .header-index__navigation-button {
