@@ -48,15 +48,25 @@
 }
 
 .header-index__navigation {
-  @media (min-width: @tablet-width) {
-    min-height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  &--nojs {
+    &.header-index__navigation-button {
+      display: none;
+    }
 
-  @media (min-width: @desktop-width) {
-    min-height: 59px;
+    .navigation {
+      position: static;
+    }
+
+    @media (min-width: @tablet-width) {
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-height: 59px;
+    }
   }
 }
 
@@ -81,18 +91,65 @@
   }
 }
 
-.header-index__navigation-button {
-  display: grid;
-  place-items: center;
+.header-index__navigation--closed .header-index__navigation-button {
+  position: relative;
   height: 24px;
   width: 24px;
   border: none;
-  background-image: url("../img/nav-button-open.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
   cursor: pointer;
   background-color: transparent;
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: @color-black;
+    top: 2px;
+    left: 0;
+    box-shadow: 0 8px 0 0 @color-black, 0 16px 0 0 @color-black;
+  }
+}
+
+.header-index__navigation--opened .header-index__navigation-button {
+  position: relative;
+  height: 18px;
+  width: 18px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 1.5px;
+    background-color: @color-black;
+    top: 8px;
+    left: -3px;
+  }
+
+  &::before {
+    transform: rotate(47deg);
+  }
+
+  &::after {
+    transform: rotate(-47deg);
+  }
+}
+
+.header-index__navigation--closed .header-index__navigation-list {
+  display: none;
+}
+
+.header-index__navigation--opened .header-index__navigation-list {
+  position: absolute;
+  z-index: 6;
+  width: 100%;
+}
+
+.header-index__navigation-button {
   @media (min-width: @tablet-width) {
     display: none;
   }
