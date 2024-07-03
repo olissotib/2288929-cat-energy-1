@@ -1,13 +1,14 @@
-navigationMain.classList.remove('header-index__navigation--nojs');
-let navigationMain = document.querySelector('.header-index__navigation');
-let navigationButton = document.querySelector('.header-index__navigation-button');
+let navigationMain = document.querySelector('.header__navigation');
+let navigationButton = document.querySelector('.header__navigation-button');
+
+navigationMain.classList.remove('header__navigation--nojs');
 
 navigationButton.addEventListener('click', function () {
-  if (navigationMain.classList.contains('header-index__navigation--closed')) {
-    navigationMain.classList.remove('header-index__navigation--closed');
-    navigationMain.classList.add('header-index__navigation--opened');
+  if (navigationMain.classList.contains('header__navigation--closed')) {
+    navigationMain.classList.remove('header__navigation--closed');
+    navigationMain.classList.add('header__navigation--opened');
   } else {
-  navigationMain.classList.add('header-index__navigation--closed');
-  navigationMain.classList.remove('header-index__navigation--opened');
+  navigationMain.classList.add('header__navigation--closed');
+  navigationMain.classList.remove('header__navigation--opened');
   }
 })

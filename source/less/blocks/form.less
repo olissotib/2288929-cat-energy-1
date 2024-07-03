@@ -247,7 +247,7 @@
     outline-color: @color-dark-grey-second;
   }
 
-  &:invalid {
+  &:focus:invalid {
     outline-color: @color-form-error;
   }
 }
@@ -256,7 +256,7 @@
   color: @color-green;
 }
 
-.form__control:invalid + svg {
+.form__control:focus:invalid + svg {
   color: @color-form-error;
 }
 

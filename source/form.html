@@ -9,7 +9,7 @@
   <body class="form__body">
     <header class="header">
       <div class="header__container">
-        <nav class="header__navigation">
+        <nav class="header__navigation header__navigation--opened header__navigation--nojs">
           <div class="header__navigation-container">
             <div class="header__navigation-logo">
               <a class="logo-icon logo-icon__container" href="./index.html">
@@ -22,10 +22,10 @@
             <span class="visually-hidden">
               Открыть меню
             </span>
-            <button class="header__navigation-button navigation-form__button--isclosed" type="button">
+            <button class="header__navigation-button header__navigation-button" type="button">
             </button>
           </div>
-          <ul class="navigation-form__list navigation">
+          <ul class="header__navigation-list navigation">
             <li class="navigation__item">
               <a class="navigation__link" href="index.html">Главная</a>
             </li>
@@ -54,13 +54,13 @@
                   <label class="form__label" for="name">
                     Имя*
                   </label>
-                  <input class="form__control" id="name" type="text" name="cat-name" placeholder="Барсик" required>
+                  <input class="form__control" id="name" type="text" name="cat-name" placeholder="Барсик" value="Барсик" required>
                 </div>
                 <div class="from__item-container">
                   <label class="form__label" for="age">
                     Вес (кг):*
                   </label>
-                  <input class="form__control" id="age" type="text" name="cat-weight" placeholder="7" required>
+                  <input class="form__control" id="age" type="text" name="cat-weight" placeholder="7" value="7" required>
                 </div>
                 <div class="from__item-container">
                   <label class="form__label">
@@ -98,7 +98,7 @@
                 <label class="form__label" for="mail">
                 E-mail:*
                 </label>
-                <input class="form__control" id="mail" type="email" name="owner-email" placeholder="kuklachev@gmail.com" required>
+                <input class="form__control" id="mail" type="email" value="kuklachev@gmail.com" name="owner-email" placeholder="kuklachev@gmail.com" required>
                 <svg class="form__control-icon form__control-icon--email" xmlns="http://www.w3.org/2000/svg" width="18" height="14" fill="none" viewBox="0 0 18 14">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M.5 5.5v8h17v-8M.5.5h17v2L9 8.5l-8.5-6v-2Z"/>
                 </svg>
@@ -107,7 +107,7 @@
               <label class="form__label" for="phone">
                 Телефон:*
               </label>
-                <input class="form__control" id="phone" type="text" name="owner-phone" placeholder="8 (960) 900-60-90" required>
+                <input class="form__control" id="phone" type="text" name="owner-phone" placeholder="8 (960) 900-60-90" value="8 (960) 900-60-90" required>
                 <svg class="form__control-icon form__control-icon--phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M7 8h8.5m0 0L13 5.5M15.5 8 13 10.5M5.5.5v5h-3v5h3v5H3c-1.5 0-2.5-1-2.5-2.5V3C.5 1.5 1.5.5 3 .5h2.5Z"/>
                 </svg>
