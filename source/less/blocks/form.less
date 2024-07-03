@@ -203,12 +203,11 @@
 
 .form__control.textarea {
   resize: none;
-  border: none;
   font-size: inherit;
   font-family: inherit;
   line-height: inherit;
   text-transform: uppercase;
-  outline: 1px solid @color-input-border;
+  border: 1px solid @color-input-border;
   padding: 14px;
   min-width: 280px;
   min-height: 150px;
@@ -240,15 +239,17 @@
 
 .form__control {
   &:hover {
-    outline-color: @color-ordinary-grey;
+    border-color: @color-ordinary-grey;
   }
 
-  &:focus {
-    outline-color: @color-dark-grey-second;
+  &:focus-visible {
+    outline: 1px solid @color-dark-grey-second;
+    border-color: @color-dark-grey-second;
   }
 
-  &:focus:invalid {
-    outline-color: @color-form-error;
+  &:focus-visible:invalid {
+    outline: 1px solid @color-form-error;
+    border-color: @color-form-error;
   }
 }
 
