@@ -20,9 +20,13 @@
       height: 302px;
       width: 100%;
       top: 0;
-      background-image: url("../img/index-promo-cat.jpg");
+      background-image: url("../img/index-promo-bg-mobile.jpg");
       background-position: top center;
       background-size: 100% auto;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-promo-bg-mobile@2x.jpg");
+      }
     }
   }
 
@@ -145,6 +149,16 @@
 
 .promo__product-photo {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 552px;
+    height: 499px;
+  }
 }
 
 .promo__button {

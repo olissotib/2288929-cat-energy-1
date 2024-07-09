@@ -57,7 +57,12 @@
             <h2 class="promo__catchphrase">Занялся собой? Займись котом!</h2>
           </div>
           <div class="promo__product-photo-container">
-            <img class="promo__product-photo" src="./img/promo-image-mobile.svg" alt="Cat energy pro с курицей порция 500 грамм.">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/index-promo-product-desktop.png, ./img/index-promo-product-desktop2x.png 2x">
+              <source media="(min-width: 768px)" srcset="./img/index-promo-product-tablet.png, ./img/index-promo-product-tablet@2x.png 2x">
+              <source media="(min-resolution: 2dppx)" srcset="./img/index-promo-product-mobile@2x.png">
+              <img class="promo__product-photo" src="./img/index-promo-product-mobile.png" width="280" height="270" alt="Cat energy pro с курицей порция 500 грамм.">
+            </picture>
           </div>
           <a class="promo__button button button--promo"  href="form.html">Подобрать программу</a>
         </div>
