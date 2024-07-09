@@ -16,10 +16,17 @@
           <div class="header__navigation-container">
             <div class="header__navigation-logo">
               <a class="logo-icon logo-icon__container">
-                <img src="./img/logo-icon-mobile.svg" width="33" height="38" alt="Иконка логотипа.">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="./img/logotypes/logo-icon-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="./img/logotypes/logo-icon-tablet.svg">
+                  <img src="./img/logotypes/logo-icon-mobile.svg" width="33" height="38" alt="Иконка логотипа.">
+                </picture>
               </a>
               <a class="logo-text logo-text__container">
-                <img src="./img/logo-text-mobile.svg" width="101" height="18" alt="Cat energy.">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/logotypes/cat-energy-tablet.svg">
+                  <img src="./img/logotypes/cat-energy-mobile.svg" width="101" height="18" alt="Cat energy.">
+                </picture>
               </a>
             </div>
             <span class="visually-hidden">
