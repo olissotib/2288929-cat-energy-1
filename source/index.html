@@ -135,8 +135,11 @@
           <div class="example__slider before-after-slider">
             <button class="before-after-slider__button" type="button"></button>
             <span class="visually-hidden">Сравнить внешний вид до и после</span>
-            <img class="before-after-slider__photo before-after-slider__photo--before" src="./img/slider-mobile-before1x.png"  width="280" height="256" alt="Внещний вид кота в начале.">
-            <!-- <img class="before-after-slider__photo before-after-slider__photo--after" src="./img/slider-mobile-after1x.png"   width="280" height="256" alt="Внещний вид кота в конце."> -->
+            <picture>
+              <source media="(min-width: 768px)" srcset="./img/slider-before-tablet.png, ./img/slider-before-tablet@2x.png 2x">
+              <source media="(min-resolution: 2dppx)" srcset="./img/slider-before-mobile@2x.png">
+              <img class="before-after-slider__photo before-after-slider__photo--before" src="./img/slider-before-mobile.png"  width="280" height="256" alt="Внещний вид кота в начале.">
+            </picture>
           </div>
         </div>
       </section>
