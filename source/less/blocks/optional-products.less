@@ -17,6 +17,7 @@
 .optional-products__container {
   .container();
 
+
   @media (min-width: @tablet-width) {
     .container-tablet();
   }
@@ -34,12 +35,50 @@
   font-weight: 400;
 
   @media (min-width: @tablet-width) {
-    .margin(0 40px 80px;);
+    .margin(0 0 80px;);
     .font-parameters(@color-black; 36px; 36px;);
   }
 
   @media (min-width: @desktop-width) {
     .margin(0 0 80px;);
+  }
+
+  &--line-decor {
+    position: relative;
+    display: inline-block;
+    background-color: @color-white;
+    .padding(0 20px 0 0);
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 100vw;
+      height: 2px;
+      background-color: @color-green;
+      top: 50%;
+      left: 0;
+    }
+
+    @media (min-width: @tablet-width) {
+      .padding(0 40px);
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 100vw;
+        height: 2px;
+        background-color: @color-green;
+        top: 50%;
+        right: 0;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: -40px;
+    }
   }
 }
 
