@@ -26,6 +26,7 @@
   @media (min-width: @tablet-width) {
     min-height: 50px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
   }
@@ -33,6 +34,10 @@
   @media (min-width: @desktop-width) {
     min-height: 59px;
   }
+}
+
+.header__navigation-list {
+  align-self: end;
 }
 
 .header__navigation-logo {

@@ -63,8 +63,15 @@
   background-color: @color-expamle-background;
 
   @media (min-width: @tablet-width) {
-    max-width: 125px;
+    max-width: 146px;
     .font-parameters(@color-dark-grey-second; 14px; 14px;);
+    .margin-padding(7px 0 -6px; 0 10px;);
+
+    background-color: @color-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @color-light-grey;
   }
 }
 

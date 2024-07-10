@@ -37,18 +37,31 @@
 
 .gift__image-container {
   position: absolute;
-  background-image: url("../img/cat-case.jpg");
+  background-image: url("../img/cat-case-mobile.jpg");
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   opacity: 0.15;
 
-  @media (min-width: @tablet-width) {
-    background-image: url("../img/cat-case-tablet.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/cat-case-mobile@2x.jpg");
   }
 
-  @media (min-width: @desktop-width) {
-    background-image: url("../img/cat-case.jpg");
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/cat-case-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/cat-case-tablet@2x.jpg");
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../img/cat-case-desktop.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/cat-case-desktop@2x.jpg");
+      }
+    }
   }
 }
 

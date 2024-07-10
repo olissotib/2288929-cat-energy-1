@@ -4,19 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи - Подбор программы</title>
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="form__body">
     <header class="header">
       <div class="header__container">
-        <nav class="header__navigation header__navigation--opened header__navigation--nojs">
+        <nav class="header__navigation header__navigation--closed header__navigation--nojs">
           <div class="header__navigation-container">
             <div class="header__navigation-logo">
               <a class="logo-icon logo-icon__container" href="./index.html">
-                <img src="./img/logo-icon-mobile.svg" width="33" height="38" alt="Иконка логотипа.">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="./img/logotypes/logo-icon-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="./img/logotypes/logo-icon-tablet.svg">
+                  <img src="./img/logotypes/logo-icon-mobile.svg" width="33" height="38" alt="Иконка логотипа.">
+                </picture>
               </a>
               <a class="logo-text logo-text__container" href="./index.html">
-                <img src="./img/logo-text-mobile.svg" width="101" height="18" alt="Cat energy.">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/logotypes/cat-energy-tablet.svg">
+                  <img src="./img/logotypes/cat-energy-mobile.svg" width="101" height="18" alt="Cat energy.">
+                </picture>
               </a>
             </div>
             <span class="visually-hidden">
@@ -91,7 +99,7 @@
               </fieldset>
             </div>
             <fieldset class="form__fieldset form__fieldset--contacts">
-              <legend class="form__description form__description--contacts">
+              <legend class="form__description form__description--contacts form__description--line-decor">
                 Контактные данные (владельца кота)
               </legend>
               <div class="from__item-container">
@@ -114,7 +122,7 @@
               </div>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--comment">
-              <legend class="form__description form__description--comment">
+              <legend class="form__description form__description--comment form__description--line-decor">
                 Комментарий
               </legend>
               <label class="form__label">
@@ -122,7 +130,7 @@
               </label>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--optional">
-              <legend class="form__description form__description--optional">
+              <legend class="form__description form__description--optional form__description--line-decor">
                 Дополнительно
               </legend>
               <ul class="form__list">

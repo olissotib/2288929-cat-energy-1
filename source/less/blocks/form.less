@@ -99,10 +99,40 @@
   }
 }
 
+.form__description--line-decor {
+  position: relative;
+  display: inline-block;
+  background-color: @color-white;
+  .padding(0 20px 0 0);
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 2px;
+    background-color: @color-green;
+    top: 50%;
+    left: 0;
+  }
+
+  @media (max-width: @mobile-only-width) {
+    &::after {
+      top: 18px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: -40px;
+  }
+}
+
 .form__description {
+
   .font-parameters(@color-black; 24px; 26px);
 
   &--contacts {
+    max-width: 202px;
     margin-bottom: 35px;
   }
 
@@ -116,8 +146,21 @@
 
   @media (min-width: @tablet-width) {
     .font-parameters(@color-black; 36px; 36px);
+    .padding(0 40px;);
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 100vw;
+      height: 2px;
+      background-color: @color-green;
+      top: 50%;
+      right: 0;
+    }
 
     &--contacts {
+      max-width: none;
       margin-bottom: 76px;
     }
 
@@ -203,12 +246,11 @@
 
 .form__control.textarea {
   resize: none;
-  border: none;
   font-size: inherit;
   font-family: inherit;
   line-height: inherit;
   text-transform: uppercase;
-  outline: 1px solid @color-input-border;
+  border: 1px solid @color-input-border;
   padding: 14px;
   min-width: 280px;
   min-height: 150px;
@@ -240,15 +282,17 @@
 
 .form__control {
   &:hover {
-    outline-color: @color-ordinary-grey;
+    border-color: @color-ordinary-grey;
   }
 
-  &:focus {
-    outline-color: @color-dark-grey-second;
+  &:focus-visible {
+    outline: 1px solid @color-dark-grey-second;
+    border-color: @color-dark-grey-second;
   }
 
-  &:focus:invalid {
-    outline-color: @color-form-error;
+  &:focus-visible:invalid {
+    outline: 1px solid @color-form-error;
+    border-color: @color-form-error;
   }
 }
 
