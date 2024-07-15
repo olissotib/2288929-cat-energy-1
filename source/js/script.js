@@ -1,6 +1,9 @@
 let navigationMain = document.querySelector('.header__navigation');
 let navigationButton = document.querySelector('.header__navigation-button');
+let locationFrameMap = document.querySelector('.location__map--nojs');
 
+
+locationFrameMap.classList.remove('location__map--nojs');
 navigationMain.classList.remove('header__navigation--nojs');
 
 navigationButton.addEventListener('click', function () {
