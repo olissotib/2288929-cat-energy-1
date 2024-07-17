@@ -1,5 +1,9 @@
 .location__container {
   .margin(0 auto;);
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
 }
 
 .location__map {
@@ -9,5 +13,24 @@
 
   @media (min-width: @tablet-width) {
     min-height: 400px;
+  }
+}
+
+.location__map--nojs {
+  @media (max-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.location__noscript-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  @media (min-width: @desktop-width) {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }

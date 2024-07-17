@@ -14,12 +14,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    left: 110px;
-    transform: translateY(50%);
-    background-color: @color-white;
-    position: absolute;
+    max-width: 1220px;
+    position: relative;
+    margin: 0 auto;
     padding: 0;
-    max-width: 565px;
   }
 }
 
@@ -31,8 +29,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 570px;
+    background-color: @color-white;
+    position: absolute;
     .padding(60px 80px;);
+    min-width: 565px;
+    z-index: 1;
+    left: 0;
+    transform: translateY(50%);
   }
 }
 
