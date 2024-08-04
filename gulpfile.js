@@ -7,6 +7,7 @@ import browser from 'browser-sync';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import gulpSquoosh from 'gulp-libsquoosh';
+import squoosh from 'gulp-libsquoosh';
 
 // Styles
 
@@ -29,6 +30,16 @@ export const images = () => {
   .pipe(gulpSquoosh())
   .pipe(gulp.dest('build/img'))
 }
+
+// WebP
+export const createWebp = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(squoosh({
+    webp: {}
+  }))
+  .pipe(gulp.dest('build/img'))
+}
+
 
 // Server
 
