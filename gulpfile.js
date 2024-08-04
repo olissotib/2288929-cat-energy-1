@@ -8,6 +8,7 @@ import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import gulpSquoosh from 'gulp-libsquoosh';
 import gulpSvgo from 'gulp-svgo';
+import svgSprite from 'gulp-svgstore';
 
 // Styles
 
@@ -25,6 +26,7 @@ export const styles = () => {
 }
 
 // Images
+
 export const images = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(gulpSquoosh())
@@ -32,6 +34,7 @@ export const images = () => {
 }
 
 // WebP
+
 export const createWebp = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(squoosh({
@@ -40,13 +43,25 @@ export const createWebp = () => {
   .pipe(gulp.dest('build/img'))
 }
 
-//SVG
+// SVG
 
 export const optimizeSvg = () => {
   return gulp.src('source/img/*.svg', '!source/img/sprite/*.svg')
   .pipe(gulpSvgo())
   .pipe(gulp.dest('build/img'))
 
+}
+
+// Sprite
+
+export const createSvgSprite = () => {
+  return gulp.src('source/img/sprite/*.svg')
+  .pipe(gulpSvgo())
+  .pipe(svgSprite({
+    inlineSvg: true
+  }))
+  .pipe(rename('sprite.svg'))
+  .pipe(gulp.dest('build/img'))
 }
 
 // Server
