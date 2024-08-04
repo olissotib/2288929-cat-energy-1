@@ -6,6 +6,7 @@ import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
+import gulpSquoosh from 'gulp-libsquoosh';
 
 // Styles
 
@@ -20,6 +21,13 @@ export const styles = () => {
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+}
+
+// Images
+export const images = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(gulpSquoosh())
+  .pipe(gulp.dest('build/img'))
 }
 
 // Server
