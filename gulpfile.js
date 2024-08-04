@@ -7,7 +7,7 @@ import browser from 'browser-sync';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import gulpSquoosh from 'gulp-libsquoosh';
-import squoosh from 'gulp-libsquoosh';
+import gulpSvgo from 'gulp-svgo';
 
 // Styles
 
@@ -40,6 +40,14 @@ export const createWebp = () => {
   .pipe(gulp.dest('build/img'))
 }
 
+//SVG
+
+export const optimizeSvg = () => {
+  return gulp.src('source/img/*.svg', '!source/img/sprite/*.svg')
+  .pipe(gulpSvgo())
+  .pipe(gulp.dest('build/img'))
+
+}
 
 // Server
 
