@@ -64,6 +64,20 @@ export const createSvgSprite = () => {
   .pipe(gulp.dest('build/img'))
 }
 
+// Copy
+export const copy = (done) => {
+  gulp.src([
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+    'source/*.webmanifest',
+  ], {
+    base: 'source'
+  })
+  .pipe(gulp.dest('build'))
+  done();
+}
+
+
 // Server
 
 const server = (done) => {
