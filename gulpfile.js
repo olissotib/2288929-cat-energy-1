@@ -77,6 +77,11 @@ export const copy = (done) => {
   done();
 }
 
+// Clean
+
+export const clean = () => {
+  return delete('build');
+};
 
 // Server
 
