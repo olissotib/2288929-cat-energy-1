@@ -9,6 +9,7 @@ import rename from 'gulp-rename';
 import gulpSquoosh from 'gulp-libsquoosh';
 import gulpSvgo from 'gulp-svgo';
 import svgSprite from 'gulp-svgstore';
+import { deleteAsync } from 'del';
 
 // Styles
 
@@ -78,9 +79,8 @@ export const copy = (done) => {
 }
 
 // Clean
-
 export const clean = () => {
-  return delete('build');
+  return deleteAsync('build');
 };
 
 // Server
@@ -106,5 +106,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  styles, server, watcher
+  styles, server, watcher,
 );
