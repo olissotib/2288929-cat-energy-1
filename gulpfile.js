@@ -69,7 +69,7 @@ export const createSvgSprite = () => {
 
 export const copy = (done) => {
   gulp.src([
-    'source/fonts/*.{woff2,woff}',
+    'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
     'source/*.webmanifest',
     'source/*.html'
@@ -103,7 +103,7 @@ export const clean = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
