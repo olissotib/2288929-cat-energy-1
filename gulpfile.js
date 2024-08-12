@@ -30,7 +30,7 @@ export const styles = () => {
 
 // Html
 
-export const html = () => {
+const html = () => {
   return gulp.src('source/*.html')
   .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('build'))
@@ -38,7 +38,7 @@ export const html = () => {
 
 // Scripts
 
-export const scripts = () => {
+const scripts = () => {
   return gulp.src('source/js/*.js')
   .pipe(terser())
   .pipe(gulp.dest('build/js'))
@@ -46,7 +46,7 @@ export const scripts = () => {
 
 // Images
 
-export const optimizeImages = () => {
+const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(gulpSquoosh())
   .pipe(gulp.dest('build/img'))
@@ -54,7 +54,7 @@ export const optimizeImages = () => {
 
 // WebP
 
-export const createWebp = () => {
+const createWebp = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(gulpSquoosh({
     webp: {}
@@ -64,7 +64,7 @@ export const createWebp = () => {
 
 // SVG
 
-export const optimizeSvg = () => {
+const optimizeSvg = () => {
   return gulp.src('source/img/*.svg', '!source/img/sprite/*.svg')
   .pipe(gulpSvgo())
   .pipe(gulp.dest('build/img'))
@@ -73,7 +73,7 @@ export const optimizeSvg = () => {
 
 // Sprite
 
-export const createSvgSprite = () => {
+const createSvgSprite = () => {
   return gulp.src('source/img/sprite/*.svg')
   .pipe(gulpSvgo())
   .pipe(svgSprite({
@@ -85,7 +85,7 @@ export const createSvgSprite = () => {
 
 // Copy
 
-export const copy = (done) => {
+const copy = (done) => {
   gulp.src([
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
@@ -99,7 +99,7 @@ export const copy = (done) => {
 
 // Copy html
 
-export const copyHtml = (done) => {
+const copyHtml = (done) => {
   gulp.src([
     'source/*.html',
   ], {
@@ -111,7 +111,7 @@ export const copyHtml = (done) => {
 
 // Copy js
 
-export const copyJS = (done) => {
+const copyJS = (done) => {
   gulp.src([
     'source/js/*.js',
   ], {
@@ -124,7 +124,7 @@ export const copyJS = (done) => {
 
 // Copy images
 
-export const copyImages = (done) => {
+const copyImages = (done) => {
   gulp.src([
     'source/img/**/*.{jpg,png,svg}',
   ], {
@@ -136,7 +136,7 @@ export const copyImages = (done) => {
 
 // Clean
 
-export const clean = () => {
+const clean = () => {
   return deleteAsync('build');
 };
 
