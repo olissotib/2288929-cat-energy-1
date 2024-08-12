@@ -89,14 +89,38 @@ export const copy = (done) => {
   gulp.src([
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
-    'source/*.webmanifest',
-    'source/*.html'
+    'source/*.webmanifest'
   ], {
     base: 'source'
   })
   .pipe(gulp.dest('build'))
   done();
 }
+
+// Copy html
+
+export const copyHtml = (done) => {
+  gulp.src([
+    'source/*.html',
+  ], {
+    base: 'source'
+  })
+  .pipe(gulp.dest('build'))
+  done();
+}
+
+// Copy js
+
+export const copyJS = (done) => {
+  gulp.src([
+    'source/js/*.js',
+  ], {
+    base: 'source'
+  })
+  .pipe(gulp.dest('build'))
+  done();
+}
+
 
 // Copy images
 
@@ -156,6 +180,8 @@ export const build = gulp.series(
 
 export default gulp.series(
   clean,
+  copyHtml,
+  copyJS,
   copy,
   copyImages,
   gulp.parallel(
