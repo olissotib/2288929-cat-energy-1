@@ -41,6 +41,7 @@ const html = () => {
 const scripts = () => {
   return gulp.src('source/js/*.js')
   .pipe(terser())
+  .pipe(rename('script.min.js'))
   .pipe(gulp.dest('build/js'))
 };
 
@@ -97,31 +98,6 @@ const copy = (done) => {
   done();
 }
 
-// Copy html
-
-const copyHtml = (done) => {
-  gulp.src([
-    'source/*.html',
-  ], {
-    base: 'source'
-  })
-  .pipe(gulp.dest('build'))
-  done();
-}
-
-// Copy js
-
-const copyJS = (done) => {
-  gulp.src([
-    'source/js/*.js',
-  ], {
-    base: 'source'
-  })
-  .pipe(gulp.dest('build'))
-  done();
-}
-
-
 // Copy images
 
 const copyImages = (done) => {
@@ -154,12 +130,19 @@ const server = (done) => {
   done();
 }
 
+// Reload
+
+const reload = (done) => {
+  browser.reload();
+  done();
+}
+
 // Watcher
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/js/*.js').on('change', browser.reload);
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/js/*.js', gulp.series(scripts, reload));
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 // Build
@@ -180,12 +163,12 @@ export const build = gulp.series(
 
 export default gulp.series(
   clean,
-  copyHtml,
-  copyJS,
   copy,
   copyImages,
   gulp.parallel(
     styles,
+    html,
+    scripts,
     optimizeSvg,
     createSvgSprite,
     createWebp

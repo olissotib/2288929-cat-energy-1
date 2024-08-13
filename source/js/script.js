@@ -14,3 +14,4 @@ navigationButton.addEventListener('click', function () {
   navigationMain.classList.remove('header__navigation--opened');
   }
 })
+
