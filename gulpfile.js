@@ -3,6 +3,7 @@ import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
+import htmlmin from 'gulp-htmlmin';
 import browser from 'browser-sync';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
@@ -10,6 +11,7 @@ import gulpSquoosh from 'gulp-libsquoosh';
 import gulpSvgo from 'gulp-svgo';
 import svgSprite from 'gulp-svgstore';
 import { deleteAsync } from 'del';
+import terser from 'gulp-terser';
 
 // Styles
 
@@ -26,9 +28,26 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
+// Html
+
+const html = () => {
+  return gulp.src('source/*.html')
+  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(gulp.dest('build'))
+};
+
+// Scripts
+
+const scripts = () => {
+  return gulp.src('source/js/*.js')
+  .pipe(terser())
+  .pipe(rename('script.min.js'))
+  .pipe(gulp.dest('build/js'))
+};
+
 // Images
 
-export const optimizeImages = () => {
+const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(gulpSquoosh())
   .pipe(gulp.dest('build/img'))
@@ -36,7 +55,7 @@ export const optimizeImages = () => {
 
 // WebP
 
-export const createWebp = () => {
+const createWebp = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(gulpSquoosh({
     webp: {}
@@ -46,7 +65,7 @@ export const createWebp = () => {
 
 // SVG
 
-export const optimizeSvg = () => {
+const optimizeSvg = () => {
   return gulp.src('source/img/*.svg', '!source/img/sprite/*.svg')
   .pipe(gulpSvgo())
   .pipe(gulp.dest('build/img'))
@@ -55,7 +74,7 @@ export const optimizeSvg = () => {
 
 // Sprite
 
-export const createSvgSprite = () => {
+const createSvgSprite = () => {
   return gulp.src('source/img/sprite/*.svg')
   .pipe(gulpSvgo())
   .pipe(svgSprite({
@@ -67,12 +86,11 @@ export const createSvgSprite = () => {
 
 // Copy
 
-export const copy = (done) => {
+const copy = (done) => {
   gulp.src([
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
-    'source/*.webmanifest',
-    'source/*.html'
+    'source/*.webmanifest'
   ], {
     base: 'source'
   })
@@ -82,7 +100,7 @@ export const copy = (done) => {
 
 // Copy images
 
-export const copyImages = (done) => {
+const copyImages = (done) => {
   gulp.src([
     'source/img/**/*.{jpg,png,svg}',
   ], {
@@ -94,7 +112,7 @@ export const copyImages = (done) => {
 
 // Clean
 
-export const clean = () => {
+const clean = () => {
   return deleteAsync('build');
 };
 
@@ -112,11 +130,19 @@ const server = (done) => {
   done();
 }
 
+// Reload
+
+const reload = (done) => {
+  browser.reload();
+  done();
+}
+
 // Watcher
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/js/*.js', gulp.series(scripts, reload));
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 // Build
@@ -126,6 +152,8 @@ export const build = gulp.series(
   optimizeImages,
   gulp.parallel(
     styles,
+    html,
+    scripts,
     optimizeSvg,
     createSvgSprite,
     createWebp
@@ -139,6 +167,8 @@ export default gulp.series(
   copyImages,
   gulp.parallel(
     styles,
+    html,
+    scripts,
     optimizeSvg,
     createSvgSprite,
     createWebp
