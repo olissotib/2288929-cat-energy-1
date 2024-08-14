@@ -159,9 +159,18 @@
             <button class="before-after-slider__button" type="button"></button>
             <span class="visually-hidden">Сравнить внешний вид до и после</span>
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/slider-before-tablet.webp 1x, ./img/slider-before-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/slider-before-mobile.webp 1x, ./img/slider-before-mobile@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="./img/slider-before-tablet.png, ./img/slider-before-tablet@2x.png 2x">
               <source media="(min-resolution: 2dppx)" srcset="./img/slider-before-mobile@2x.png">
               <img class="before-after-slider__photo before-after-slider__photo--before" src="./img/slider-before-mobile.png"  width="280" height="256" alt="Внещний вид кота в начале.">
+            </picture>
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/slider-after-tablet.webp 1x, ./img/slider-after-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/slider-after-mobile.webp 1x, ./img/slider-after-mobile@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="./img/slider-after-tablet.png, ./img/slider-after-tablet@2x.png 2x">
+              <source media="(min-resolution: 2dppx)" srcset="./img/slider-after-mobile@2x.png">
+              <img class="before-after-slider__photo before-after-slider__photo--after" src="./img/slider-after-mobile.png"  width="280" height="256" alt="Внещний вид кота в конце.">
             </picture>
           </div>
         </div>
