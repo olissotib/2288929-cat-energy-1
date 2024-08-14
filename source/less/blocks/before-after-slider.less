@@ -107,4 +107,28 @@
       height: 512px;
     }
   }
+
+  svg {
+    color: @color-ordinary-grey-second;
+  }
+
+  &:hover {
+    &::after {
+      background-color: @color-green;
+    }
+
+    svg {
+      color: @color-green;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: rgba(94, 170, 47, 0.6);
+    }
+
+    svg {
+      color: rgba(94, 170, 47, 0.6);
+    }
+  }
 }
