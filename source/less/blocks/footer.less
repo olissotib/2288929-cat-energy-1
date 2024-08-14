@@ -24,7 +24,14 @@
 }
 
 .footer__logo {
-  .margin(40px 0 20px;);
+  .padding(40px 0 19px;);
+
+  @media (max-width: @mobile-only-width) {
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid @color-header-border-grey;
+  }
 
   @media (min-width: @tablet-width) {
     .margin(0;);
@@ -32,7 +39,14 @@
 }
 
 .footer__social {
-  .margin-padding(20px 0; 0;);
+  .margin-padding(0; 22px 0 17px;);
+
+  @media (max-width: @mobile-only-width) {
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid @color-header-border-grey;
+  }
 
   @media (min-width: @tablet-width) {
     .margin-padding(0;0;);
@@ -40,7 +54,7 @@
 }
 
 .footer__developer {
-  margin-bottom: 40px;
+  .margin(20px 0 40px;);
 
   @media (min-width: @tablet-width) {
     .margin-padding(0;0;);
