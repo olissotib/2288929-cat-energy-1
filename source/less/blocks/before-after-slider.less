@@ -79,3 +79,32 @@
     height: 512px;
   }
 }
+
+.before-after-slider__button {
+  position: absolute;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    height: 256px;
+    width: 4px;
+    border-radius: 2px;
+    background-color: @color-ordinary-grey-second;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: @tablet-width) {
+      height: 512px;
+    }
+  }
+}
