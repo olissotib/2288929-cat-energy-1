@@ -13,8 +13,20 @@
   }
 }
 
+.before-after-slider__box {
+  width: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .before-after-slider__photo {
   object-fit: cover;
+
+  &--after {
+    transform: translate(-50%, 0);
+  }
 
   @media (min-width: @tablet-width) {
     width: 560px;
@@ -29,6 +41,14 @@
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  &--after {
+    width: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 
