@@ -9,7 +9,7 @@
 
 .product__container {
   max-width: 320px;
-  .margin-padding(0 auto; 20px 20px 25px;);
+  .margin-padding(0 auto; 20px 20px 24px;);
 
   @media (min-width: @tablet-width) {
     max-width: 324px;
@@ -22,6 +22,8 @@
   }
 
   &--show-more-card {
+    .margin-padding(0 auto; 25px 20px 24px;);
+
     @media (min-width: @tablet-width) {
       border: 2px solid @color-light-grey;
       .padding(50px 37px 40px;);
@@ -49,6 +51,7 @@
 }
 
 .product__photo-container {
+  min-height: 107px;
   display: grid;
   place-items: center;
   min-width: 140px;
@@ -67,6 +70,7 @@
 .product__title {
   .margin-padding(0 0 14px; 0;);
   .font-parameters(@color-dark-grey-second; 16px; 20px;);
+  text-transform: uppercase;
   font-weight: 400;
   max-width: 80px;
 
