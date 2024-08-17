@@ -1,8 +1,16 @@
 .header {
   background-color: @color-white;
 
+  &--catalog {
+    border-bottom: 1px solid @color-header-border-grey;
+  }
+
   @media (min-width: @tablet-width) {
     min-width: 704px;
+
+    &--catalog {
+      border-bottom: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
