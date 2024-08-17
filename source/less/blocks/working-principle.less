@@ -135,26 +135,26 @@
     }
 
     &--nutrition::after {
-      top: 80px;
-      left: 25px;
+      top: 81px;
+      left: 24px;
       transform: translateY(-50%);
     }
 
     &--form::after {
-      top: 80px;
-      left: 25px;
+      top: 81px;
+      left: 27px;
       transform: translateY(-50%);
     }
 
     &--eating::after {
       top: 80px;
-      left: 25px;
+      left: 28px;
       transform: translateY(-50%);
     }
 
     &--result::after {
       top: 80px;
-      left: 25px;
+      left: 27px;
       transform: translateY(-50%);
     }
   }
@@ -170,8 +170,20 @@
       position: absolute;
       font-family: "Oswald", sans-serif;
       .font-parameters(@color-light-grey; 280px; 280px;);
-      bottom: 0;
-      right: 0;
+      bottom: 1px;
+      right: -1px;
     }
+
+    &--first-item::before {
+      right: 22px;
+    }
+  }
+}
+
+.working-principle__text-shift {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
   }
 }
