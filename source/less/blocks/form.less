@@ -17,7 +17,7 @@
   border: none;
   border-bottom: 1px solid @color-header-border-grey;
   .margin-padding(0; 0 20px;);
-  gap: 14px;
+  gap: 13px;
   display: grid;
 
   &--general {
@@ -25,7 +25,7 @@
   }
 
   &--programm {
-    padding: 25px 20px 19px;
+    padding: 22px 20px 19px;
   }
 
   &--contacts {
@@ -34,14 +34,17 @@
   }
 
   &--comment {
-    margin-top: 24px;
-    padding-bottom: 23px;
+    padding-bottom: 22px;
     border: none;
   }
 
   &--optional {
     padding-bottom: 34px;
     border: none;
+  }
+
+  &--no-border {
+    border-bottom: none;
   }
 
   @media (min-width: @tablet-width) {
@@ -118,7 +121,7 @@
 
   @media (max-width: @mobile-only-width) {
     &::after {
-      top: 18px;
+      top: 16px;
     }
   }
 
@@ -132,7 +135,7 @@
   .font-parameters(@color-black; 24px; 26px);
 
   &--contacts {
-    max-width: 202px;
+    max-width: 206px;
     margin-bottom: 35px;
   }
 
@@ -351,8 +354,8 @@
   width: 13px;
   border-radius: 50%;
   background-color: @color-green;
-  top: 7.5px;
-  left: 7.5px;
+  top: 7px;
+  left: 7px;
 
   @media (min-width: @tablet-width) {
     height: 18px;
@@ -364,7 +367,7 @@
 
 .form__control[type="checkbox"]:checked + .form__control-mark {
   background-image: url("../img/checkmark-mobile.svg");
-  background-size: 18px 14px;
+  background-size: 19px 15px;
   background-repeat: no-repeat;
   background-position: center center;
 
@@ -376,7 +379,7 @@
 .form__list {
   .list-style-reset();
   display: grid;
-  row-gap: 13px;
+  row-gap: 12px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, 284px);
