@@ -42,7 +42,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    .padding(100px 0 0;);
+    .margin-padding(0 auto 25px; 86px 0 0;);
+
+    &::before {
+      top: 16px;
+    }
+
+    &::after {
+      top: 15px;
+    }
   }
 }
 
@@ -56,5 +64,9 @@
     .font-parameters(@color-black-second; 16px; 18px;);
     .margin(0 auto 82px;);
     max-width: 170px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .margin(0 auto 90px;);
   }
 }
