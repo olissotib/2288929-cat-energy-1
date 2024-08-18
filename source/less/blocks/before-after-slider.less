@@ -11,6 +11,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0;
     min-width: 560px;
   }
 }
@@ -84,6 +85,10 @@
 
   svg {
     color: @color-ordinary-grey-second;
+
+    @media (min-width: @desktop-width) {
+      transform: translateY(-100%);
+    }
   }
 
   &:hover {
