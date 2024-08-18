@@ -71,7 +71,7 @@
         width: 100vw;
         height: 2px;
         background-color: @color-green;
-        top: 50%;
+        top: 62%;
         right: 0;
       }
     }
@@ -92,7 +92,9 @@
   border-top: 1px solid @color-ordinary-grey;
 
   @media (min-width: @tablet-width) {
-    .padding(26px 38px;);
+    .padding(26px 37px 27px;);
+    border: 1px solid @color-ordinary-grey;
+    border-bottom: none;
     display: grid;
     grid-template-columns: repeat(2, 280px);
     column-gap: 72px;
@@ -117,6 +119,7 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
+    .margin(0 0 25px;);
     .font-parameters(@color-dark-grey; 20px; 20px;);
   }
 
@@ -135,9 +138,10 @@
 
   @media (min-width: @tablet-width) {
     .font-parameters(@color-dark-grey-second; 16px; 20px;);
+    .margin(0 0 21px;);
     display: grid;
-    grid-template-columns: 192px 78px;
-    gap: 10px;
+    grid-template-columns: 187px 77px;
+    gap: 13px;
   }
 
   @media (min-width: @desktop-width) {
