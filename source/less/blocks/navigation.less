@@ -21,11 +21,15 @@
 
     &--last-item {
       margin-right: 4px;
-
-      @media (min-width: @desktop-width) {
-        margin-right: 0;
-      }
     }
+
+    &--last-item-catalog {
+      margin-right: 3px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
   }
 }
 
@@ -79,10 +83,12 @@
         background-color: @color-green;
         top: 33px;
         left: 0;
+      }
+    }
 
-        @media (min-width: @desktop-width) {
-          top: 37px;
-        }
+    &--current-catalog {
+      &::before {
+        top: 31px;
       }
     }
   }
@@ -92,6 +98,7 @@
 
     &--current {
       &::before {
+        top: 37px;
         background-color: @color-white;
       }
     }

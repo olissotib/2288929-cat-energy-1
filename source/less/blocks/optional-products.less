@@ -71,13 +71,22 @@
         width: 100vw;
         height: 2px;
         background-color: @color-green;
-        top: 64%;
+        top: 62%;
         right: 0;
+      }
+
+      &::after {
+        top: 62%;
       }
     }
 
     @media (min-width: @desktop-width) {
       margin-left: -40px;
+
+      &::before,
+      &::after {
+        top: 64%;
+      }
     }
   }
 }
@@ -148,7 +157,8 @@
 
   @media (min-width: @desktop-width) {
     .margin(0;);
-    grid-template-columns: 204px 60px;
+    .padding(7px 0 0;);
+    grid-template-columns: 223px 46px;
     column-gap: 20px;
   }
 }
@@ -164,7 +174,7 @@
 }
 
 .optional-products__description-text {
-  justify-self: end;
+  justify-self: start;
 }
 
 .optional-products__button {

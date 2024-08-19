@@ -56,11 +56,14 @@
   border-top: 1px solid @color-light-grey-second;
 
   &--last-item {
-    margin-top: 80px;
     border-bottom: 1px solid @color-light-grey-second;
   }
 
   @media (min-width: @tablet-width) {
     border: none;
+
+    &--last-item {
+      margin-top: 80px;
+    }
   }
 }
