@@ -16,7 +16,7 @@
 .programm__title {
   position: relative;
   .font-parameters(@color-black; 24px; 37px;);
-  .margin-padding(0 0 29px; 0 0 0 70px;);
+  .margin-padding(0 0 29px; 0 0 0 71px;);
   font-weight: 400;
   text-transform: uppercase;
 
@@ -56,17 +56,33 @@
     background-color: @color-green;
     left: 1px;
     top: -6px;
+
+    &--gain {
+      left: 0;
+    }
   }
 
   @media (min-width: @tablet-width) {
     .font-parameters(@color-black; 36px; 36px;);
     .margin-padding(0 0 24px; 0;);
 
+    &::before {
+      width: 200px;
+      height: 200px;
+      left: auto;
+      right: 0;
+      top: 15px;
+    }
+
+    &--gain::before {
+      top: 14px;
+    }
+
     &--slim::after {
       transform: scale(1);
       left: auto;
-      right: 31px;
-      top: 3px;
+      right: 30px;
+      top: 4px;
     }
 
     &--gain::after {
@@ -74,14 +90,6 @@
       left: auto;
       right: -34px;
       top: 58px;
-    }
-
-    &::before {
-      width: 200px;
-      height: 200px;
-      left: auto;
-      right: 0;
-      top: 14px;
     }
   }
 

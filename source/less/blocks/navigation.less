@@ -16,7 +16,15 @@
 .navigation__item {
   @media (min-width: @tablet-width) {
     &:not(:last-child) {
-      margin-right: 33px;
+      margin-right: 34px;
+    }
+
+    &--last-item {
+      margin-right: 4px;
+
+      @media (min-width: @desktop-width) {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -35,6 +43,7 @@
 
 .navigation__link {
   display: block;
+  position: relative;
   text-align: center;
   .padding(22px 10px 22px);
   min-width: 320px;
@@ -55,22 +64,36 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 0 0 10px;
+    .padding(0;);
     .font-size(18px; 24px;);
     min-width: max-content;
     min-height: min-content;
     border: none;
 
     &--current {
-      border-bottom: 2px solid @color-green;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: @color-green;
+        top: 33px;
+        left: 0;
+
+        @media (min-width: @desktop-width) {
+          top: 37px;
+        }
+      }
     }
   }
 
   @media (min-width: @desktop-width) {
     .font-parameters(@color-black; 20px; 30px;);
 
-    &--current &--index {
-      color: @color-white;
+    &--current {
+      &::before {
+        background-color: @color-white;
+      }
     }
 
     &--index {
