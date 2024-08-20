@@ -32,13 +32,21 @@
   @media (min-width: @tablet-width) {
     min-height: 50px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     align-items: center;
     justify-content: space-between;
+
+    ul {
+      margin-bottom: 3px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     min-height: 59px;
+
+    ul {
+      margin-bottom: 9px;
+    }
   }
 }
 
@@ -54,12 +62,20 @@
 .header__navigation-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: start;
+  align-self: start;
 
   @media (max-width: @mobile-only-width) {
     .container();
     padding-top: 13px;
     padding-bottom: 14px;
+  }
+}
+
+.header__navigation-list {
+  @media (min-width: @tablet-width) {
+    align-self: baseline;
   }
 }
 
