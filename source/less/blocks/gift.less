@@ -8,6 +8,7 @@
   @media (min-width: @desktop-width) {
     .padding(0;);
     align-self: end;
+    max-height: 370px;
   }
 }
 
@@ -69,7 +70,7 @@
 
 .gift__description {
   z-index: 2;
-  .margin-padding(187px 0 0 ; 0 0 5px 0;);
+  .margin-padding(187px 0 0; 0 0 5px 0;);
   .font-family("Lato", sans-serif;);
   .font-parameters(@color-white; 16px; 20px;);
   font-weight: 400;
@@ -89,7 +90,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    .margin-padding(0 125px 0 0; 0;);
+    .margin-padding(1px 125px 0 0; 0;);
     text-align: left;
 
     &::before {
@@ -99,12 +100,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    .margin-padding(185px 0 0 ; 0;);
+    .margin(185px 0 0;);
     text-align: center;
 
     &::before {
-      top: 58px;
-      left: 85px;
+      top: 57px;
+      left: 84px;
     }
   }
 }
