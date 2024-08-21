@@ -71,6 +71,24 @@
 
 .product__photo {
   margin-top: 2px;
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+    height: 172px;
+
+    &--big {
+      width: 168px;
+      height: 206px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--big {
+      width: 169px;
+      height: 196px;
+    }
+  }
 }
 
 .product__title {

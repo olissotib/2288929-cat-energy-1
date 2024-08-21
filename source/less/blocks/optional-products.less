@@ -174,7 +174,11 @@
 }
 
 .optional-products__description-text {
-  justify-self: start;
+  justify-self: end;
+
+  @media (min-width: @desktop-width) {
+    justify-self: start;
+  }
 }
 
 .optional-products__button {
