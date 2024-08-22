@@ -1,5 +1,6 @@
 .optional-products {
   padding-top: 25px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     .padding(0;);
@@ -7,13 +8,7 @@
 
   @media (min-width: @desktop-width) {
     .container-desktop();
-    height: 100%;
     padding-bottom: 87px;
-    display: grid;
-    grid-template-columns: 896px 245px;
-    grid-template-rows: auto;
-    column-gap: 80px;
-    grid-auto-flow: row;
   }
 }
 
@@ -26,70 +21,79 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0;
-    padding: 0;
-    max-width: 896px;
+    .margin-padding(0; 0;);
+    height: 100%;
+    display: grid;
+    grid-template-columns: 896px 245px;
+    grid-template-rows: auto;
+    column-gap: 80px;
+    grid-auto-flow: row;
+    max-width: 1221px;
+  }
+}
+
+.optional-products__title-container {
+  max-width: 320px;
+  margin: 0 auto 35px;
+  display: flex;
+  justify-content: flex-start;
+
+  @media (min-width: @tablet-width) {
+    max-width: 768px;
+    .margin-padding(0 auto 80px; 0 0 0 30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .margin-padding(0 auto 79px;0);
+    max-width: 1440px;
   }
 }
 
 .optional-products__title {
-  .margin-padding(0 0 35px; 0;);
+  position: relative;
+  .margin-padding(0; 0 20px 0;);
   .font-parameters(@color-black; 24px; 24px;);
+  background-color: @color-white;
   font-weight: 400;
 
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 2px;
+    background-color: @color-green;
+    top: 64%;
+    left: 0;
+  }
+
   @media (min-width: @tablet-width) {
-    .margin(0 0 80px;);
+    .margin(0;);
     .font-parameters(@color-black; 36px; 36px;);
-  }
+    .padding(0 40px);
 
-  @media (min-width: @desktop-width) {
-    .margin(0 0 79px;);
-  }
-
-  &--line-decor {
-    position: relative;
-    display: inline-block;
-    background-color: @color-white;
-    .padding(0 20px 0 0);
-
-
-    &::after {
+    &::before {
       content: "";
       position: absolute;
       z-index: -1;
       width: 100vw;
       height: 2px;
       background-color: @color-green;
+      top: 62%;
+      right: 0;
+    }
+
+    &::after {
+      top: 62%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -40px;
+
+    &::before,
+    &::after {
       top: 64%;
-      left: 0;
-    }
-
-    @media (min-width: @tablet-width) {
-      .padding(0 40px);
-
-      &::before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        width: 100vw;
-        height: 2px;
-        background-color: @color-green;
-        top: 62%;
-        right: 0;
-      }
-
-      &::after {
-        top: 62%;
-      }
-    }
-
-    @media (min-width: @desktop-width) {
-      margin-left: -40px;
-
-      &::before,
-      &::after {
-        top: 64%;
-      }
     }
   }
 }
