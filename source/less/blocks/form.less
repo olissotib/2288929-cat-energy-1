@@ -237,21 +237,28 @@
   }
 }
 
-.form__control[type="text"] {
+.form__control {
   .form-control-appearancestyle();
   .font-parameters(@color-dark-grey-second; 16px; 18px;);
+  flex-grow: 2;
 
-  @media (min-width: @tablet-width) {
-    .padding(10px 20px;);
-    min-height: 52px;
-    .font-size(20px; 30px;);
+  &--hasIcon {
+    .padding(13px 35px 12px 15px;);
   }
-}
 
-.form__control[type="email"] {
-  .form-control-appearancestyle();
-  .font-parameters(@color-dark-grey-second; 16px; 18px;);
-  .padding(13px 35px 12px 15px;);
+  &:hover {
+    border-color: @color-ordinary-grey;
+  }
+
+  &:focus-visible {
+    outline: 1px solid @color-dark-grey-second;
+    border-color: @color-dark-grey-second;
+  }
+
+  &:focus-visible:invalid {
+    outline: 1px solid @color-form-error;
+    border-color: @color-form-error;
+  }
 
   @media (min-width: @tablet-width) {
     .padding(10px 20px;);
@@ -305,24 +312,6 @@
     &--phone {
       right: 17px;
     }
-  }
-}
-
-.form__control {
-  flex-grow: 2;
-
-  &:hover {
-    border-color: @color-ordinary-grey;
-  }
-
-  &:focus-visible {
-    outline: 1px solid @color-dark-grey-second;
-    border-color: @color-dark-grey-second;
-  }
-
-  &:focus-visible:invalid {
-    outline: 1px solid @color-form-error;
-    border-color: @color-form-error;
   }
 }
 
