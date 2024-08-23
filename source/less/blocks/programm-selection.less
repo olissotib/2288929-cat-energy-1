@@ -4,8 +4,6 @@
 }
 
 .programm-selecting__container {
-  max-width: 320px;
-  margin: 0 auto;
   padding-bottom: 32px;
 
   @media (min-width: @tablet-width) {
@@ -20,11 +18,13 @@
 }
 
 .programm-selecting__title {
-  .margin-padding(0 0 37px; 0 20px;);
+  .margin-padding(0 auto 37px; 0 20px;);
   .font-parameters(@color-black; 36px; 36px);
+  max-width: 320px;
   font-weight: 400;
 
   @media (min-width: @tablet-width) {
+    max-width: none;
     .margin-padding(0 0 54px; 0 40px;);
     .font-parameters(@color-black; 60px; 60px);
   }
@@ -35,7 +35,7 @@
 }
 
 .programm-selecting__description {
-  .margin-padding(0 0 39px; 0 20px;);
+  .margin-padding(0 auto 39px; 0 20px;);
   .font-parameters(@color-black; 14px; 18px;);
   text-transform: uppercase;
   max-width: 280px;
