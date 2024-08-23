@@ -19,8 +19,22 @@
   place-items: center;
 }
 
+.social-list__link {
+  &:focus-visible,
+  &:hover {
+    outline: none;
+
+    svg {
+      color: @color-green;
+    }
+  }
+
+  &:active {
+    color: @color-green;
+    opacity: 0.3;
+  }
+}
+
 .social-list__link svg {
   color: @color-icon-dafault;
-
-  .footer-icon-states();
 }

@@ -8,6 +8,14 @@
   align-items: center;
   justify-content: space-between;
 
+  &:focus-visible {
+    outline: none;
+
+    .developer-logo svg {
+      color: @color-green;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     min-width: 168px;
     grid-template-columns: 118px 27px;
