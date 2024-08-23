@@ -66,6 +66,10 @@
   left: 50%;
   transform: translateX(-50%);
 
+  @media (min-width: @desktop-width) {
+    height: 512px;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -87,7 +91,7 @@
     color: @color-ordinary-grey-second;
 
     @media (min-width: @desktop-width) {
-      transform: translateY(-100%);
+      transform: translateY(5%);
     }
   }
 

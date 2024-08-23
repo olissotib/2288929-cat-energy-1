@@ -8,6 +8,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    .padding(77px 58px 53px 52px;);
     min-height: 374px;
     min-width: 570px;
   }
@@ -65,12 +66,13 @@
   @media (min-width: @tablet-width) {
     .font-parameters(@color-black; 36px; 36px;);
     .margin-padding(0 0 24px; 0;);
+    max-width: 400px;
 
     &::before {
       width: 200px;
       height: 200px;
       left: auto;
-      right: 0;
+      right: -193px;
       top: 15px;
     }
 
@@ -81,26 +83,27 @@
     &--slim::after {
       transform: scale(1);
       left: auto;
-      right: 30px;
+      right: -163px;
       top: 4px;
     }
 
     &--gain::after {
       transform: scale(1);
       left: auto;
-      right: -34px;
+      right: -227px;
       top: 58px;
     }
   }
 
   @media (min-width: @desktop-width) {
     .margin-padding(0 0 73px; 0 0 0 162px;);
+    max-width: 460px;
 
     &::before {
       width: 100px;
       height: 100px;
       left: 0;
-      top: 50%;
+      top: 18px;
       transform: translateY(-48%);
     }
 
