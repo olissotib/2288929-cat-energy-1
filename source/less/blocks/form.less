@@ -249,7 +249,7 @@
   }
 }
 
-.form__fieldset--programm:has(.form__control&--hidden:focus-visible) {
+.form__fieldset--programm:has(.form__control&--hidden-radio:focus-visible) {
   outline: 1px solid @color-dark-grey-second;
   border-color: @color-dark-grey-second;
 }
@@ -258,18 +258,10 @@
   .form-control-appearancestyle();
   .font-parameters(@color-dark-grey-second; 16px; 18px;);
   flex-grow: 2;
+  .form__control-element-state();
 
   &--hasIcon {
     .padding(13px 35px 12px 15px;);
-  }
-
-  &:hover {
-    border-color: @color-ordinary-grey;
-  }
-
-  &:focus-visible {
-    outline: 1px solid @color-dark-grey-second;
-    border-color: @color-dark-grey-second;
   }
 
   &:focus-visible:invalid {
@@ -300,6 +292,8 @@
   min-width: 280px;
   min-height: 150px;
   opacity: 1;
+
+  .form__control-element-state();
 
   @media (min-width: @tablet-width) {
     .padding(11px 20px;);
@@ -397,6 +391,11 @@
     top: 10px;
     left: 10px;
   }
+}
+
+.form__control[type="checkbox"]:focus-visible + .form__control-mark {
+  outline: 1px solid @color-dark-grey-second;
+  border-color: @color-dark-grey-second;
 }
 
 .form__control[type="checkbox"]:checked + .form__control-mark {

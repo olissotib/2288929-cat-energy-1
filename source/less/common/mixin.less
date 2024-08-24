@@ -110,6 +110,17 @@
   }
 }
 
+.form__control-element-state {
+  &:hover {
+    border-color: @color-ordinary-grey;
+  }
+
+  &:focus-visible {
+    outline: 1px solid @color-dark-grey-second;
+    border-color: @color-dark-grey-second;
+  }
+}
+
 .show-more-card-icon {
   content: "";
   position: absolute;
