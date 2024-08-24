@@ -239,6 +239,10 @@
   }
 }
 
+.form__fieldset--programm:has(.form__control&--hidden:focus-visible) {
+  outline: 1px solid @color-green-hover;
+}
+
 .form__control {
   .form-control-appearancestyle();
   .font-parameters(@color-dark-grey-second; 16px; 18px;);
