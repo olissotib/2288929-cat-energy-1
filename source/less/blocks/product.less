@@ -66,6 +66,14 @@
   place-items: center;
   min-width: 140px;
 
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
   @media (min-width: @tablet-width) {
     min-width: 200px;
     min-height: 210px;
@@ -99,6 +107,18 @@
       width: 169px;
       height: 196px;
     }
+  }
+}
+
+.product__title-link {
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
