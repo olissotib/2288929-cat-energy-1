@@ -249,11 +249,6 @@
   }
 }
 
-.form__fieldset--programm:has(.form__control&--hidden-radio:focus-visible) {
-  outline: 1px solid @color-dark-grey-second;
-  border-color: @color-dark-grey-second;
-}
-
 .form__control {
   .form-control-appearancestyle();
   .font-parameters(@color-dark-grey-second; 16px; 18px;);
@@ -335,21 +330,16 @@
   color: @color-form-error;
 }
 
-.form__control[type="radio"]:disabled + .form__control-mark {
-  opacity: 0.3;
-}
-
+.form__control[type="radio"]:disabled + .form__control-mark,
 .form__control[type="radio"]:disabled ~ .form__control-label {
-  opacity: 0.3;
+  .form__control-disabled-state-opacity();
 }
 
-.form__control[type="checkbox"]:disabled + .form__control-mark {
-  opacity: 0.3;
-}
-
+.form__control[type="checkbox"]:disabled + .form__control-mark,
 .form__control[type="checkbox"]:disabled ~ .form__control-label {
-  opacity: 0.3;
+  .form__control-disabled-state-opacity();
 }
+
 
 .form__control-mark {
   position: absolute;
@@ -393,7 +383,8 @@
   }
 }
 
-.form__control[type="checkbox"]:focus-visible + .form__control-mark {
+.form__control[type="checkbox"]:focus-visible + .form__control-mark,
+.form__control[type="radio"]:focus-visible + .form__control-mark {
   outline: 1px solid @color-dark-grey-second;
   border-color: @color-dark-grey-second;
 }
