@@ -36,17 +36,13 @@
     align-items: center;
     justify-content: space-between;
 
-    ul {
-      margin-bottom: 3px;
+    .header__navigation-list {
+      .margin(13px 0 0 0;);
     }
   }
 
   @media (min-width: @desktop-width) {
     min-height: 59px;
-
-    ul {
-      margin-bottom: 9px;
-    }
   }
 }
 
@@ -68,14 +64,18 @@
 
   @media (max-width: @mobile-only-width) {
     .container();
-    padding-top: 13px;
-    padding-bottom: 14px;
+    .padding(13px 0 14px 0;);
   }
 }
 
 .header__navigation-list {
   @media (min-width: @tablet-width) {
     align-self: baseline;
+    .margin(13px 0 0 0;);
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: flex-end;
   }
 }
 

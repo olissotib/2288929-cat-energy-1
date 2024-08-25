@@ -5,6 +5,7 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    justify-content: flex-end;
     z-index: 10;
     flex-wrap: wrap;
     max-width: 520px;
@@ -22,11 +23,9 @@
 
 .navigation__item {
   @media (min-width: @tablet-width) {
-    &:not(:last-child) {
-      margin-right: 34px;
-    }
+    margin-right: 34px;
 
-    &--last-item {
+    &--last-in-row {
       margin-right: 4px;
     }
 
@@ -36,7 +35,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 0;
+    margin-right: 33px;
+
+    &--last-in-row {
+      margin-right: 4px;
+    }
+
+    &--last-item-catalog {
+      margin-right: 3px;
+    }
   }
 }
 
@@ -78,7 +85,7 @@
     .padding(0;);
     .font-size(18px; 24px;);
     min-width: max-content;
-    min-height: 34px;
+    min-height: 38px;
     border: none;
 
     &--current {
