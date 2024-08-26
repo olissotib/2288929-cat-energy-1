@@ -1,14 +1,119 @@
 .before-after-slider {
+  position: relative;
+  min-height: 256px;
+  min-width: 280px;
+
   @media (min-width: @tablet-width) {
-    position: relative;
     z-index: 2;
     min-height: 512px;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    min-width: 560px;
   }
 }
 
+.before-after-slider__box {
+  width: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .before-after-slider__photo {
+  object-fit: cover;
+
+  &--after {
+    transform: translate(-50%, 0);
+  }
+
   @media (min-width: @tablet-width) {
     width: 560px;
     height: 512px;
+  }
+}
+
+.before-after-slider__container {
+  &--before {
+    width: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &--after {
+    width: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.before-after-slider__button {
+  position: absolute;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @desktop-width) {
+    height: 512px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    height: 256px;
+    width: 4px;
+    border-radius: 2px;
+    background-color: @color-ordinary-grey-second;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: @tablet-width) {
+      height: 512px;
+    }
+  }
+
+  svg {
+    color: @color-ordinary-grey-second;
+
+    @media (min-width: @desktop-width) {
+      transform: translateY(5%);
+    }
+  }
+
+  &:hover {
+    cursor: grab;
+
+    &::after {
+      background-color: @color-green;
+    }
+
+    svg {
+      color: @color-green;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: rgba(94, 170, 47, 0.6);
+    }
+
+    svg {
+      color: rgba(94, 170, 47, 0.6);
+    }
   }
 }

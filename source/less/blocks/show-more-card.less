@@ -27,22 +27,30 @@
   @media (min-width: @tablet-width) {
     .font-parameters(@color-black-second; 20px; 24px;);
     max-width: 140px;
-    .padding(110px 0 0;);
+    .padding(108px 0 0;);
     .margin(0 auto 23px;);
 
     &::before {
-      left: 50px;
-      transform: scale(2);
+      top: 28px;
+      transform: translateX(-50%) scaleX(2);
     }
 
     &::after {
-      left: 50px;
-      transform: rotate(90deg) scale(2);
+      top: 27px;
+      transform: translateX(-47%) rotate(90deg) scaleX(2);
     }
   }
 
   @media (min-width: @desktop-width) {
-    .padding(100px 0 0;);
+    .margin-padding(0 auto 25px; 86px 0 0;);
+
+    &::before {
+      top: 16px;
+    }
+
+    &::after {
+      top: 15px;
+    }
   }
 }
 
@@ -56,5 +64,9 @@
     .font-parameters(@color-black-second; 16px; 18px;);
     .margin(0 auto 82px;);
     max-width: 170px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .margin(0 auto 90px;);
   }
 }

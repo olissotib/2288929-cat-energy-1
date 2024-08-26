@@ -1,5 +1,6 @@
 .button {
   .font-parameters(@color-white; 16px; 20px);
+  .padding(2px;);
   font-family: inherit;
   font-weight: 400;
   text-transform: uppercase;
@@ -12,8 +13,13 @@
   border: none;
 
   &--promo {
-    .font-parameters(@color-white; 20px; 26px;);
-    min-height: 54px;
+    .font-parameters(@color-white; 16px; 20px;);
+    min-height: 40px;
+
+    @media (min-width: @tablet-width) {
+      .font-size(20px; 26px;);
+      min-height: 54px;
+    }
   }
 
   &:hover {

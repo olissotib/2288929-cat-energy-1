@@ -1,9 +1,9 @@
 .working-principle {
-  .padding(0 0 49px;);
+  .padding(0 0 53px;);
 
   @media (min-width: @tablet-width) {
     border-bottom: 1px solid @color-light-grey-third;
-    .padding(0 0 47px;);
+    .padding(0 0 46px;);
   }
 
   @media (min-width: @desktop-width) {
@@ -27,7 +27,7 @@
 .working-principle__title {
   .font-parameters(@color-black; 36px; 40px);
   font-weight: 400;
-  .margin-padding(0 0 40px; 0;);
+  .margin-padding(0 0 42px; 0;);
 
   @media (min-width: @tablet-width) {
     .font-parameters(@color-black; 60px; 60px);
@@ -39,10 +39,9 @@
   counter-reset: number 0;
   .list-styles(none; 0; 0;);
   display: grid;
-  gap: 24px;
+  gap: 26px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 47px;
     grid-template-columns: repeat(2, 246px);
     row-gap: 37px;
     column-gap: 137px;
@@ -67,7 +66,7 @@
     background-color: @color-green;
     left: 0;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-49%);
   }
 
   &--nutrition::after {
@@ -77,8 +76,8 @@
     width: 30px;
     height: 32px;
     top: 50%;
-    left: 16px;
-    transform: translateY(-50%);
+    left: 15px;
+    transform: translateY(-48%);
     background-repeat: no-repeat;
   }
 
@@ -86,11 +85,11 @@
     content: "";
     position: absolute;
     background-image: url("../img/how-work-icon-form.svg");
-    width: 30px;
-    height: 32px;
+    width: 27px;
+    height: 29px;
     top: 50%;
-    left: 16px;
-    transform: translateY(-50%);
+    left: 17px;
+    transform: translateY(-46%);
     background-repeat: no-repeat;
   }
 
@@ -98,11 +97,11 @@
     content: "";
     position: absolute;
     background-image: url("../img/how-work-icon-eating.svg");
-    width: 30px;
-    height: 32px;
+    width: 27px;
+    height: 30px;
     top: 50%;
-    left: 16px;
-    transform: translateY(-50%);
+    left: 17px;
+    transform: translateY(-49%);
     background-repeat: no-repeat;
   }
 
@@ -110,11 +109,11 @@
     content: "";
     position: absolute;
     background-image: url("../img/how-work-icon-result.svg");
-    width: 30px;
+    width: 27px;
     height: 32px;
     top: 50%;
-    left: 16px;
-    transform: translateY(-50%);
+    left: 17px;
+    transform: translateY(-45%);
     background-repeat: no-repeat;
   }
 
@@ -135,26 +134,26 @@
     }
 
     &--nutrition::after {
-      top: 80px;
-      left: 25px;
+      top: 81px;
+      left: 24px;
       transform: translateY(-50%);
     }
 
     &--form::after {
-      top: 80px;
-      left: 25px;
+      top: 81px;
+      left: 27px;
       transform: translateY(-50%);
     }
 
     &--eating::after {
       top: 80px;
-      left: 25px;
+      left: 28px;
       transform: translateY(-50%);
     }
 
     &--result::after {
       top: 80px;
-      left: 25px;
+      left: 27px;
       transform: translateY(-50%);
     }
   }
@@ -170,8 +169,20 @@
       position: absolute;
       font-family: "Oswald", sans-serif;
       .font-parameters(@color-light-grey; 280px; 280px;);
-      bottom: 0;
-      right: 0;
+      top: -1px;
+      right: -1px;
     }
+
+    &--first-item::before {
+      right: 22px;
+    }
+  }
+}
+
+.working-principle__text--result-breaker {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
   }
 }

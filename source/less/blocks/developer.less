@@ -1,17 +1,36 @@
 .developer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-width: 280px;
+  max-width: 280px;
   text-decoration: none;
+  display: grid;
+  grid-template-columns: 130px 130px;
+  gap: 20px;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+
+  &:focus-visible {
+    outline: none;
+
+    .developer-logo svg {
+      color: @color-green;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     min-width: 168px;
+    grid-template-columns: 118px 27px;
+    gap: 23px;
   }
 }
 
-.developer-name__contariner {
-  margin-left: 5px;
+.developer__name-container {
+  justify-self: start;
+  display: grid;
+  grid-template-columns: 120px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 5px;
+  }
 }
 
 .developer__name {
@@ -22,11 +41,4 @@
   &:active {
     opacity: 0.3;
   }
-}
-
-.developer-logo__contariner svg {
-  display: block;
-  color: @color-icon-dafault;
-
-  .footer-icon-states();
 }

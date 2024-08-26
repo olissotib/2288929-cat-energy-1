@@ -1,12 +1,12 @@
 .catalog {
-  .padding(25px 0 0;);
+  .padding(27px 0 0;);
 
   @media (min-width: @tablet-width) {
-    .padding(65px 0 70px;);
+    .padding(63px 0 68px;);
   }
 
   @media (min-width: @desktop-width) {
-    .padding(74px 0 76px;);
+    .padding(74px 0 74px;);
   }
 }
 
@@ -28,7 +28,7 @@
 
   @media (min-width: @tablet-width) {
     max-width: 705px;
-    .margin-padding(0 0 84px; 0;);
+    .margin-padding(0 0 86px; 0;);
     .font-parameters(@color-black; 60px; 60px;);
   }
 }
@@ -56,11 +56,14 @@
   border-top: 1px solid @color-light-grey-second;
 
   &--last-item {
-    margin-top: 82px;
     border-bottom: 1px solid @color-light-grey-second;
   }
 
   @media (min-width: @tablet-width) {
     border: none;
+
+    &--last-item {
+      margin-top: 80px;
+    }
   }
 }

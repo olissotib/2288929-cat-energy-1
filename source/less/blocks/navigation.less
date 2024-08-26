@@ -5,18 +5,57 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    justify-content: flex-end;
     z-index: 10;
+    flex-wrap: wrap;
+    max-width: 520px;
   }
 
   @media (min-width: @desktop-width) {
     background-color: transparent;
+    max-width: 900px;
+
+    &--index {
+      max-width: 600px;
+    }
   }
 }
 
 .navigation__item {
   @media (min-width: @tablet-width) {
-    &:not(:last-child) {
-      margin-right: 33px;
+    margin-right: 34px;
+
+    &--last-in-row {
+      margin-right: 4px;
+    }
+
+    &--last-in-row-form {
+      margin-right: 0;
+    }
+
+    &--last-item-catalog {
+      margin-right: 3px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 33px;
+    min-height: 42px;
+
+    &--form {
+      margin-right: 35px;
+    }
+
+    &--last-in-row {
+      margin-right: 2px;
+    }
+
+    &--last-item-catalog {
+      margin-right: 3px;
+    }
+
+    &--last-in-row-form {
+      margin-right: 0;
     }
   }
 }
@@ -35,8 +74,9 @@
 
 .navigation__link {
   display: block;
+  position: relative;
   text-align: center;
-  .padding(22px 10px 24px);
+  .padding(22px 10px 22px);
   min-width: 320px;
   min-height: 66px;
   font-family: "Oswald", sans-serif;
@@ -45,8 +85,9 @@
   text-transform: uppercase;
   border-top: 1px solid @color-light-grey-third;
 
-  &--last-item {
+  &--last-link {
     border-bottom: 1px solid @color-light-grey-third;
+    min-height: 67px;
   }
 
   &--catalog-border {
@@ -54,27 +95,56 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 0 0 10px;
+    .padding(0;);
     .font-size(18px; 24px;);
     min-width: max-content;
-    min-height: min-content;
+    min-height: 38px;
     border: none;
 
     &--current {
-      border-bottom: 2px solid @color-green;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: @color-green;
+        top: 33px;
+        left: 0;
+      }
+    }
+
+    &--current-catalog {
+      &::before {
+        top: 31px;
+      }
+    }
+
+    &--current-form {
+      &::before {
+        top: 31px;
+      }
     }
   }
 
   @media (min-width: @desktop-width) {
     .font-parameters(@color-black; 20px; 30px;);
 
-    &--current &--index {
-      color: @color-white;
+    &--current-index {
+      &::before {
+        top: 37px;
+        background-color: @color-white;
+      }
     }
 
     &--index {
       color: @color-white;
       border-color: @color-white;
+    }
+
+    &--current {
+      &::before {
+        top: 36px;
+      }
     }
   }
 }

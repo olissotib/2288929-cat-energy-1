@@ -1,18 +1,40 @@
 .social-list {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, 28px);
+  display: flex;
   gap: 24px;
-  align-items: center;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    max-width: 280px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 340px;
+  }
 }
 
 .social-list__item {
+  min-width: 28px;
   display: grid;
   place-items: center;
 }
 
+.social-list__link {
+  &:focus-visible,
+  &:hover {
+    outline: none;
+
+    svg {
+      color: @color-green;
+    }
+  }
+
+  &:active {
+    color: @color-green;
+    opacity: 0.3;
+  }
+}
+
 .social-list__link svg {
   color: @color-icon-dafault;
-
-  .footer-icon-states();
 }
