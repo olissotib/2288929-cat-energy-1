@@ -63,7 +63,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    .font-parameters(@color-black; 36px; 36px;);
+    .font-size(36px; 36px;);
     .margin-padding(0 0 24px; 0;);
     max-width: 400px;
 
@@ -121,14 +121,15 @@
 }
 
 .programm__description {
-  .font-family("Lato", sans-serif;);
+  .font-family-alternative();
+  color: @color-dark-grey-second;
   .margin-padding(0 0 19px; 0 0 22px;);
   border-bottom: 1px solid @color-header-border-grey;
 
   @media (min-width: @tablet-width) {
     border: none;
     max-width: 342px;
-    .font-parameters(@color-black; 16px; 24px;);
+    .font-size(16px; 24px;);
     .margin-padding(0 0 52px; 0;);
   }
 
