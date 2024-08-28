@@ -160,6 +160,9 @@
 
   .header__navigation-list {
     position: static;
-    display: block;
+
+    @media (max-width: @mobile-only-width) {
+      display: block;
+    }
   }
 }
