@@ -212,7 +212,10 @@
   display: flex;
   gap: 13px;
   position: relative;
-  max-width: 280px;
+
+  @media (max-width: @mobile-only-width) {
+    max-width: 280px;
+  }
 }
 
 .form__label {
