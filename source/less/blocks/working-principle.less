@@ -30,7 +30,7 @@
   .margin-padding(0 0 42px; 0;);
 
   @media (min-width: @tablet-width) {
-    .font-parameters(@color-black; 60px; 60px);
+    .font-size(60px; 60px);
     .margin-padding(0 0 32px; 0;);
   }
 }
@@ -55,7 +55,8 @@
 
 .working-principle__text {
   position: relative;
-  .font-family("Lato", sans-serif;);
+  .font-family-alternative();
+  color: @color-dark-grey-second;
   .margin-padding(0; 0 0 0 80px;);
 
   &::before {
@@ -118,7 +119,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    .font-parameters(@color-dark-grey-second; 16px; 24px;);
+    .font-size(16px; 24px;);
     min-height: 280px;
     .margin-padding(0; 151px 0 57px;);
 
@@ -167,7 +168,6 @@
     &::before {
       content: counter(number);
       position: absolute;
-      font-family: "Oswald", sans-serif;
       .font-parameters(@color-light-grey; 280px; 280px;);
       top: -1px;
       right: -1px;

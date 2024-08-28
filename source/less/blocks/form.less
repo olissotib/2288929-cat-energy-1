@@ -29,11 +29,7 @@
     gap: 14px;
     padding-bottom: 23px;
     height: 100%;
-
-    .form__label {
-      align-self: flex-start;
-      margin-top: 13px;
-    }
+    align-self: center;
   }
 
   &--programm {
@@ -68,15 +64,11 @@
 
     &--general {
       margin-bottom: 72px;
-
-      .form__label {
-        margin-top: 10px;
-      }
     }
 
     &--programm {
       border: 1px solid @color-input-border;
-      .padding(24px 27px 23px 27px;);
+      .padding(24px 27px 26px 27px;);
       gap: 12px;
     }
 
@@ -153,7 +145,6 @@
 }
 
 .form__description {
-
   .font-parameters(@color-black; 24px; 26px);
 
   &--contacts {
@@ -213,6 +204,10 @@
   display: flex;
   gap: 13px;
   position: relative;
+
+  @media (max-width: @mobile-only-width) {
+    max-width: 280px;
+  }
 }
 
 .form__label {
@@ -221,11 +216,25 @@
   position: relative;
   align-self: center;
 
+
+  @media (min-width: @tablet-width) {
+    max-width: 360px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 280px;
+  }
+
+  &--textarea {
+    max-width: none;
+  }
+
   &--radio {
     .form-label-flexstyle();
 
     @media (min-width: @tablet-width) {
       .form-label-flexstyle-tablet();
+      max-width: none;
     }
   }
 
@@ -242,7 +251,6 @@
   }
 }
 
-
 .form__control::placeholder {
   .font-parameters(@color-dark-grey-second; 16px; 18px;);
   opacity: 1;
@@ -254,9 +262,11 @@
 
 .form__control {
   .form-control-appearancestyle();
+  .form__control-element-state();
   .font-parameters(@color-dark-grey-second; 16px; 18px;);
   flex-grow: 2;
-  .form__control-element-state();
+  min-width: 0;
+  max-height: 45px;
 
   &--hasIcon {
     .padding(13px 35px 12px 15px;);
@@ -271,10 +281,10 @@
     .padding(10px 20px;);
     .font-size(20px; 30px;);
     min-height: 52px;
+    max-height: 52px;
   }
 
   @media (min-width: @desktop-width) {
-    max-height: 52px;
     .font-size(20px; 30px;);
   }
 }
@@ -304,7 +314,6 @@
   }
 }
 
-
 .form__control-icon {
   position: absolute;
   right: 14px;
@@ -317,6 +326,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    top: 26px;
     right: 17px;
 
     &--phone {
@@ -342,7 +352,6 @@
 .form__control[type="checkbox"]:disabled ~ .form__control-label {
   .form__control-disabled-state-opacity();
 }
-
 
 .form__control-mark {
   position: absolute;
@@ -453,14 +462,14 @@
 }
 
 .form__note-text {
-  font-family: "Lato", sans-serif;
+  .font-family-alternative();
   .font-parameters(@color-black; 14px; 16px;);
   .margin(0;);
   text-align: center;
 
   @media (min-width: @tablet-width) {
     .margin(-4px 2px 0 0;);
-    .font-parameters(@color-black; 16px; 16px;);
+    .font-size(16px; 16px;);
     text-align: left;
     align-self: center;
   }
