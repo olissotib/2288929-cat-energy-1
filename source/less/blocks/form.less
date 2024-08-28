@@ -212,11 +212,13 @@
   display: flex;
   gap: 13px;
   position: relative;
+  max-width: 280px;
 }
 
 .form__label {
   .font-parameters(@color-dark-grey-second; 16px; 18px;);
   text-transform: uppercase;
+  white-space: nowrap;
   position: relative;
   align-self: center;
 
@@ -252,9 +254,10 @@
 
 .form__control {
   .form-control-appearancestyle();
+  .form__control-element-state();
   .font-parameters(@color-dark-grey-second; 16px; 18px;);
   flex-grow: 2;
-  .form__control-element-state();
+  min-width: 0;
 
   &--hasIcon {
     .padding(13px 35px 12px 15px;);
@@ -462,18 +465,18 @@
   }
 }
 
-@supports (-moz-appearance: none) {
+/* @supports (-moz-appearance: none) {
   @media (max-width: @mobile-only-width) {
-    /* .form__item-container {
+    .form__item-container {
       max-width: 280px;
-    } */
+    }
 
-    /* .form__control-icon {
+    .form__control-icon {
       right: 34px;
 
       &--phone {
 
       }
-    } */
+    }
   }
-}
+} */
