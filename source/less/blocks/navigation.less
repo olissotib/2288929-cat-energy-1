@@ -9,6 +9,7 @@
     z-index: 10;
     flex-wrap: wrap;
     max-width: 520px;
+    gap: 10px;
   }
 
   @media (min-width: @desktop-width) {
@@ -23,7 +24,7 @@
 
 .navigation__item {
   @media (min-width: @tablet-width) {
-    margin-right: 34px;
+    margin-right: 24px;
 
     &--last-in-row {
       margin-right: 4px;
@@ -39,11 +40,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 33px;
+    margin-right: 23px;
     min-height: 42px;
 
     &--form {
-      margin-right: 35px;
+      margin-right: 25px;
     }
 
     &--last-in-row {
@@ -96,8 +97,9 @@
   @media (min-width: @tablet-width) {
     .padding(0;);
     .font-size(18px; 24px;);
-    min-width: max-content;
-    min-height: 38px;
+    max-width: 200px;
+    min-width: min-content;
+    min-height: min-content;
     border: none;
 
     &--current {
@@ -107,20 +109,20 @@
         width: 100%;
         height: 2px;
         background-color: @color-green;
-        top: 33px;
+        bottom: -10px;
         left: 0;
       }
     }
 
     &--current-catalog {
       &::before {
-        top: 31px;
+        bottom: -8px;
       }
     }
 
     &--current-form {
       &::before {
-        top: 31px;
+        bottom: -8px;
       }
     }
   }
@@ -130,7 +132,7 @@
 
     &--current-index {
       &::before {
-        top: 37px;
+        bottom: -15px;
         background-color: @color-white;
       }
     }
@@ -142,7 +144,7 @@
 
     &--current {
       &::before {
-        top: 36px;
+        bottom: -8px;
       }
     }
   }
