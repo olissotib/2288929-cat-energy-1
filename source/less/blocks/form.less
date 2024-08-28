@@ -29,11 +29,7 @@
     gap: 14px;
     padding-bottom: 23px;
     height: 100%;
-
-    .form__label {
-      align-self: flex-start;
-      margin-top: 13px;
-    }
+    .form-label-input-alignment();
   }
 
   &--programm {
@@ -43,6 +39,7 @@
   &--contacts {
     margin-top: 26px;
     padding-bottom: 24px;
+    .form-label-input-alignment();
   }
 
   &--comment {
@@ -221,15 +218,25 @@
 .form__label {
   .font-parameters(@color-dark-grey-second; 16px; 18px;);
   text-transform: uppercase;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   position: relative;
   align-self: center;
+
+
+  @media (min-width: @tablet-width) {
+    max-width: 360px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 280px;
+  }
 
   &--radio {
     .form-label-flexstyle();
 
     @media (min-width: @tablet-width) {
       .form-label-flexstyle-tablet();
+      max-width: none;
     }
   }
 
@@ -320,6 +327,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    top: 26px;
     right: 17px;
 
     &--phone {
