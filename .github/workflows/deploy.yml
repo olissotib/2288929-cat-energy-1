@@ -2,7 +2,7 @@ name: Deploy Cat Energy to GitHub Pages
 
 on:
   push:
-    branches: [ "master" ]  # или "main", если у вас другая ветка
+    branches: [ "master" ]
 
 jobs:
   deploy:
