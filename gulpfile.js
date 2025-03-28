@@ -66,7 +66,7 @@ const createWebp = () => {
 // SVG
 
 const optimizeSvg = () => {
-  return gulp.src('source/img/*.svg', '!source/img/sprite/*.svg')
+  return gulp.src('source/img/**/*.svg', '!source/img/sprite/*.svg')
   .pipe(gulpSvgo())
   .pipe(gulp.dest('build/img'))
 
